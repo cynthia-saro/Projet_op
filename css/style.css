@@ -1,0 +1,9 @@
+html{
+    cursor: url("../images/curseur/patte_chien.gif"), pointer;
+    min-height:100vh;
+}
+
+main {
+    width: 70%;
+    margin: 20px auto 0;
+}

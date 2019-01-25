@@ -1,0 +1,32 @@
+#detail_topic_forum{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#detail_topic_forum h1{
+    width:100%;
+}
+
+.forum_auteur{
+    width:25%;
+    border:0.5px black solid;
+    text-align: center;
+}
+
+.forum_message{
+    width:75%;
+    border:0.5px black solid;
+    padding:3%;
+}
+
+#zone_message{
+    margin-top:3px;
+    width:100%;
+}
+
+#zone_message textarea{
+    width:100%;
+    max-width:100%;
+    min-height:10vh;
+    max-height:30vh;
+}
