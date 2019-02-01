@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22d4cb31-e1e1-492c-a7f5-54ac1f6228af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/classes/animal.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/animalManager.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/profil.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detail_animal.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/evenements_liste.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/animaux.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liste_animaux.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/veterinaires_liste.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/ForumMessageManager.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/ForumMessageManager.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Utilisateur.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Utilisateur.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/UtilisateurManager.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/UtilisateurManager.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/categorieManager.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/categorieManager.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/forum.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/forum.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forum_detail_topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/forum_detail_topic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/footer.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/footer.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/head.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/head.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/header.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/header.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/menu_global.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/css/animaux.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,16 +111,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/forum_detail_topic.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="755">
-              <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+            <state relative-caret-position="704">
+              <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profil.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -232,11 +210,11 @@
         <option value="$PROJECT_DIR$/veterinaires_liste.php" />
         <option value="$PROJECT_DIR$/css/profil.css" />
         <option value="$PROJECT_DIR$/classes/ForumMessageManager.class.php" />
-        <option value="$PROJECT_DIR$/forum_detail_topic.php" />
         <option value="$PROJECT_DIR$/css/forum.css" />
         <option value="$PROJECT_DIR$/include/header.inc.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/profil.php" />
+        <option value="$PROJECT_DIR$/forum_detail_topic.php" />
       </list>
     </option>
   </component>
@@ -348,12 +326,12 @@
       <workItem from="1548100589225" duration="3290000" />
       <workItem from="1548620680298" duration="7767000" />
       <workItem from="1548797036987" duration="8441000" />
-      <workItem from="1549011707124" duration="601000" />
+      <workItem from="1549011707124" duration="778000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46794000" />
+    <option name="totallyTimeSpent" value="46971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -663,17 +641,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forum_detail_topic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/profil.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="110" selection-start-line="10" selection-start-column="110" selection-end-line="10" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum_detail_topic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
         </state>
       </provider>
     </entry>

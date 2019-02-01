@@ -67,7 +67,6 @@ $topic=$forumTopicManager->getTopic($_GET['topic']);
                 echo '<a class="numerotation_page_topic" style="font-weight:bold" href="forum_detail_topic.php?topic=' . $_GET["topic"] . '&page=' . $i . '">' . $i . '</a>';
             }
         }
-
         ?>
         </div>
     </nav>
