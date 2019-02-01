@@ -7,7 +7,9 @@ class Utilisateur {
     private $first_name;
     private $username;
     private $email;
+    private $date_birthday;
     private $password;
+    private $image_profil;
 
     public function __construct($valeurs = array()) {
         if (! empty($valeurs)) {
@@ -33,8 +35,14 @@ class Utilisateur {
                 case 'email':
                     $this->setEmail($valeur);
                     break;
+                case 'date_birthday':
+                    $this->setDateBirthday($valeur);
+                    break;
                 case 'password':
                     $this->setPassword($valeur);
+                    break;
+                case 'image_profil':
+                    $this->setImageProfil($valeur);
                     break;
             }
         }
@@ -86,6 +94,26 @@ class Utilisateur {
     
     public function setPassword($password){
         $this->password=$password;
+    }
+
+    public function getDateBirthday()
+    {
+        return $this->date_birthday;
+    }
+
+    public function setDateBirthday($date_birthday)
+    {
+        $this->date_birthday = $date_birthday;
+    }
+
+    public function getImageProfil()
+    {
+        return $this->image_profil;
+    }
+
+    public function setImageProfil($image_profil)
+    {
+        $this->image_profil = $image_profil;
     }
 }
 ?>

@@ -16,8 +16,8 @@ class categorieManager{
         $requete=$this->db->prepare($sql);
         $requete->execute();
 
-        while ($cateogie = $requete->fetch(PDO::FETCH_OBJ)) {
-            $arrayCategories[] = new Categorie($cateogie);
+        while ($categorie = $requete->fetch(PDO::FETCH_OBJ)) {
+            $arrayCategories[] = new Categorie($categorie);
         }
         $requete->closeCursor();
         return $arrayCategories;

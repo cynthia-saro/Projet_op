@@ -7,17 +7,19 @@ $pdo=new Mypdo();
 $categorieManager=new categorieManager($pdo);
 $categories=$categorieManager->getAllCategoriesAnimaux();
 ?>
-<main>
-    <?php
-    foreach($categories as $categorie) {
-    ?>
-        <div data-id-categorie="<?php echo $categorie->getId();?>">
-            <img src="<?php echo $categorie->getImage();?>"> <?php //cover avec l'attribut style sur la div ??? ?>
-            <span><?php echo $categorie->getLibelle();?></span>
+    <main>
+        <div id="liste_categories_animaux">
+            <?php
+            foreach($categories as $categorie) {
+                ?>
+                <div style="cursor:pointer" class="categories_animaux" data-id-categorie="<?php echo $categorie->getId();?>">
+                    <img src="images/categories_animaux/<?php echo $categorie->getImage();?>">
+                    <div><?php echo $categorie->getLibelle();?></div>
+                </div>
+                <?php
+            }
+            ?>
         </div>
-    <?php
-    }
-    ?>
-</main>
+    </main>
 <?php
 require_once("include/footer.inc.php");

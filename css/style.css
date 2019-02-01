@@ -7,3 +7,26 @@ main {
     width: 70%;
     margin: 20px auto 0;
 }
+
+img{
+    display:block;
+    max-width:100%;
+    min-width:100%;
+    min-height:100%;
+    max-height:100%;
+    object-fit: cover;
+}
+
+#logo_site{
+    max-height:8%;
+    max-width:8%;
+}
+
+#bloc_header{
+    background-color: #dbff3d;
+}
+
+#texte_logo{
+     text-align:center;
+    font-size:1.2em;
+}

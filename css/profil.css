@@ -1,0 +1,41 @@
+#image_utilisateur_profil{
+    width:5%;
+}
+
+.liste_info_user{
+    margin-left:5px;
+}
+
+#bloc_profil_utilisateur{
+    position:relative;
+    display:flex;
+    border:1px solid green;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+#bloc_profil_utilisateur #image_utilisateur_profil{
+    width:25%;
+}
+
+#informations_utilisateur{
+    width:75%;
+    margin-left:50px;
+    padding:10px;
+}
+
+#liste_informations_utilisateur{
+    display:flex;
+    flex-direction: column;
+    margin-top:10%;
+    align-items: center;
+}
+
+#liste_informations_utilisateur div{
+    margin:3px;
+    font-size:1.1em;
+}
+
+#informations_utilisateur h1{
+    text-align:center;
+}

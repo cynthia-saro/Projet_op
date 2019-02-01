@@ -32,10 +32,12 @@ class ForumMessageManager{
         return $arrayMessages;
     }*/
 
-    public function getAllMessagesOfTopic($idTopic){
-        $sql='SELECT m.id,idTopic,message,dateCreated,idUser,username FROM forum_messages m
+    public function getAllMessagesOfTopicByPage($idTopic,$numeroPage){
+        $numeroPage=($numeroPage-1)*20;
+        $sql="SELECT m.id,idTopic,message,dateCreated,idUser,username,image_profil FROM forum_messages m
               INNER JOIN users u ON u.id=m.idUser WHERE idTopic=:idTopic
-              ORDER BY dateCreated ASC';
+              ORDER BY dateCreated ASC
+              LIMIT $numeroPage,20";
         $requete=$this->db->prepare($sql);
         $requete->bindValue(':idTopic',$idTopic);
         $requete->execute();
@@ -43,5 +45,17 @@ class ForumMessageManager{
         $arrayMessagesUtilisateurs=$requete->fetchAll();
         $requete->closeCursor();
         return $arrayMessagesUtilisateurs;
+    }
+
+    public function getNombreMessageOfTopic($idTopic){
+        $sql="SELECT COUNT(*) as nombre_message_total FROM forum_messages m
+              INNER JOIN users u ON u.id=m.idUser WHERE idTopic=:idTopic";
+        $requete=$this->db->prepare($sql);
+        $requete->bindValue(':idTopic',$idTopic);
+        $requete->execute();
+
+        $nombreMessage=$requete->fetch();
+        $requete->closeCursor();
+        return $nombreMessage;
     }
 }

@@ -1,7 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Logoo
- * Date: 30/01/2019
- * Time: 00:08
- */
+$titre="Espace profil";
+require_once("include/header.inc.php");
+?>
+    <main>
+
+    </main>
+<?php
+require_once("include/footer.inc.php");
+?>

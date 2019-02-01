@@ -5,22 +5,27 @@ include_once('classes/Mypdo.class.php');
 $last_name='';
 $first_name='';
 $username='';
+$date_birthday='';
 $email='';
 
 $erreurLastName='';
 $erreurFirstName='';
 $erreurUsername='';
 $erreurEmail='';
+$erreurDateAnniversaire='';
 $erreurPassword='';
 $erreurPasswordBis='';
+$erreurImageProfil='';
 
 if($_POST){
     $last_name=$_POST['last_name'];
     $first_name=$_POST['first_name'];
     $username=$_POST['username'];
     $email=$_POST['email'];
+    $date_birthday=$_POST['date_birthday'];
     $password=$_POST['password'];
     $password_bis=$_POST['password_bis'];
+    $image_profil=$_FILES['image_profil'];
     
     if(strlen($last_name)>255){
         $erreurLastName="La taille du nom de famille est trop grande.";
@@ -66,14 +71,16 @@ if($_POST){
         $password=sha1($password);
         $dbo = new Mypdo();
         $utilisateurManager = new UtilisateurManager($dbo);
-        $utilisateurManager->add($last_name, $first_name, $username, $email, $password);
-        $_SESSION['id'] = $db->lastInsertId();
+        $utilisateurManager->add($last_name, $first_name, $username, $email, $date_birthday, $password, $image_profil);
+        $_SESSION['id'] = $dbo->lastInsertId();
+        $folder='images/utilisateurs/';
+        move_uploaded_file($_FILES['image_profil']['tmp_name'],$folder.$_SESSION['id'].'_'.basename($_FILES['image_profil']['name']));
         header('Location:index.php');
     }
 }
 ?>
 <main>
-    <form action="inscription.php" method="post">
+    <form action="inscription.php" method="post" enctype="multipart/form-data">
         <div>
             <label for="last_name">Nom : </label>
             <input id="last_name" type="text" name="last_name" value="<?php echo $last_name;?>" placeholder="Nom" required>
@@ -99,6 +106,12 @@ if($_POST){
         </div>
         
         <div>
+            <label for="date_birthday">Date anniversaire : </label>
+            <input id="date_birthday" type="date" name="date_birthday" value="<?php echo date('Y-m-d',strtotime($date_birthday));?> placeholder="" required>
+            <div class="erreurs_formulaires"><?php echo $erreurDateAnniversaire;?></div>
+        </div>
+        
+        <div>
             <label for="password">Mot de passe : </label>
             <input id="password" type="password" name="password" placeholder="Mot de passe" required>
             <div class="erreurs_formulaires"><?php echo $erreurPassword;?></div>
@@ -109,7 +122,19 @@ if($_POST){
             <input id="password_bis" type="password" name="password_bis" placeholder="Confirmer mot de passe" required>
             <div class="erreurs_formulaires"><?php echo $erreurPasswordBis;?></div>
         </div>
-        <button type="submit">Se connecter</button>
+        
+        <div>
+            <label for="image_profil">Image de profil : </label>
+            <input type="file" name="image_profil" id="image_profil" accept=".jpg, .jpeg, .png" required>
+            <div>Vous pourrez toujours modifier votre image de profil plus tard.</div>
+            <!--<div id="liste_images_defaut_profil">
+                <img src="images/utilisateurs/image_defaut_utilisateur_01.jpg">
+                <img src="images/utilisateurs/image_defaut_utilisateur_02.jpg">
+                <img src="images/utilisateurs/image_defaut_utilisateur_03.jpg">
+            </div>-->
+            <div class="erreurs_formulaires"><?php echo $erreurImageProfil;?></div>
+        </div>
+        <button type="submit">S'inscrire</button>
     </form>
 </main>
 <?php

@@ -1,0 +1,33 @@
+#liste_categories_animaux,#liste_animaux{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:0 auto;
+}
+
+.categories_animaux,.animaux{
+    width:100%;
+    padding:15px;
+}
+
+.categories_animaux div,.animaux div{
+    width:100%;
+    text-align:center;
+    background-color:green;
+    color:white;
+    font-weight: bold;
+}
+
+/* VERSION TABLETTE */
+@media screen and (min-width:600px){
+    .categories_animaux,.animaux{
+        width:50%;
+    }
+}
+
+/* VERSION BUREAU */
+@media screen and (min-width:950px){
+    .categories_animaux,.animaux{
+        width:25%;
+    }
+}
