@@ -1,4 +1,4 @@
-<?php 
+<?php
 $titre="Espace d'inscription";
 require_once("include/header_connexion_inscription.inc.php");
 include_once('classes/Mypdo.class.php');
@@ -24,7 +24,7 @@ if($_POST){
     $password=$_POST['password'];
     $password_bis=$_POST['password_bis'];
     $image_profil=$_FILES['image_profil'];
-    
+
     if(strlen($last_name)>255){
         $erreurLastName="La taille du nom de famille est trop grande.";
     }
@@ -73,7 +73,7 @@ if($_POST){
         $_SESSION['id'] = $dbo->lastInsertId();
         $folder='images/utilisateurs/';
         move_uploaded_file($_FILES['image_profil']['tmp_name'],$folder.$_SESSION['id'].'_'.basename($_FILES['image_profil']['name']));
-        header('Location:index.php');
+        //header('Location:index.php');
     }
 }
 ?>
@@ -88,37 +88,37 @@ if($_POST){
             <input id="last_name" type="text" name="last_name" value="<?php echo $last_name;?>" placeholder="Nom" required>
             <div class="erreurs_formulaires"><?php echo $erreurLastName;?></div>
         </div>
-        
+
         <div>
             <label for="first_name">Prénom</label>
             <input id="first_name" type="text" name="first_name" value="<?php echo $first_name;?>" placeholder="Prénom" required>
             <div class="erreurs_formulaires"><?php echo $erreurFirstName;?></div>
         </div>
-        
+
         <div>
             <label for="username">Pseudo</label>
             <input id="username" type="text" name="username" value="<?php echo $username;?>" placeholder="Pseudo" required>
             <div class="erreurs_formulaires"><?php echo $erreurUsername;?></div>
         </div>
-        
+
         <div>
             <label for="email" >Adresse mail</label>
             <input id="email" type="email" name="email" value="<?php echo $email;?>" placeholder="Email" required>
             <div class="erreurs_formulaires"><?php echo $erreurEmail;?></div>
         </div>
-        
+
         <div>
             <label for="password">Mot de passe</label>
             <input id="password" type="password" name="password" placeholder="Mot de passe" required>
             <div class="erreurs_formulaires"><?php echo $erreurPassword;?></div>
         </div>
-        
+
         <div>
             <label for="password_bis">Confirmer le mot de passe</label>
             <input id="password_bis" type="password" name="password_bis" placeholder="Confirmer mot de passe" required>
             <div class="erreurs_formulaires"><?php echo $erreurPasswordBis;?></div>
         </div>
-        
+
         <div>
             <label for="image_profil">Image de profil</label>
             <div>
