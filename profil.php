@@ -13,11 +13,17 @@ $utilisateur=$utilisateurManager->getUtilisateur($_GET['id']);
             <h1><?php echo $utilisateur->getLastName().' '.$utilisateur->getFirstName();?></h1>
             <div id="liste_informations_utilisateur">
                 <div><i class="far fa-user"></i><span class="liste_info_user"><?php echo $utilisateur->getUsername();?></span></div>
-                <div><i class="far fa-envelope"></i><span class="liste_info_user"><?php echo $utilisateur->getEmail();?></span></div>
-                <div><i class="fas fa-birthday-cake"></i><span class="liste_info_user"><?php echo utf8_encode(strftime('%A %d %B %Y',strtotime($utilisateur->getDateBirthday())));?></span></div>
             </div>
         </div>
     </div>
+
+    <?php
+    if(!empty($_SESSION['id'])){
+        if($_SESSION['id']===$utilisateur->getId()) { ?>
+            <button onclick="location.href = 'ajouter_animal.php'">Ajouter animal</button>
+        <?php
+        }
+    } ?>
 </main>
 <?php
 require_once("include/footer.inc.php");

@@ -2,7 +2,22 @@
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin:0 auto;
+    margin:0 auto 30px auto;
+}
+
+#liste_categories_animaux img,#liste_animaux img{
+    filter: grayscale(50%);
+    -webkit-filter: grayscale(50%);
+    -moz-filter: grayscale(50%);
+    -ms-filter: grayscale(50%);
+    -o-filter: grayscale(50%);
+}
+
+#liste_categories_animaux img:hover,#liste_animaux img:hover  {
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%); /* Firefox */
+    border:2px solid #028090;
+    border-radius:8px 8px 0 0;
 }
 
 .categories_animaux,.animaux{
@@ -13,7 +28,7 @@
 .categories_animaux div,.animaux div{
     width:100%;
     text-align:center;
-    background-color:green;
+    background-color:#028090;
     color:white;
     font-weight: bold;
 }

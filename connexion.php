@@ -1,6 +1,6 @@
 <?php 
 $titre="Espace de connexion";
-require_once("include/header.inc.php");
+require_once("include/header_connexion_inscription.inc.php");
 include_once('classes/UtilisateurManager.class.php');
 $email='';
 $erreurAdresseMail='';
@@ -32,16 +32,20 @@ if($_POST){
     }
 }
 ?>
-<main>
+<main id="pages_connexion_inscription">
+    <div id="bloc_ci">
+        <div id="selected"><a href="connexion.php">Connexion</a></div>
+        <div id="non_selected"><a href="inscription.php">Inscription</a></div>
+    </div>
     <form action="connexion.php" method="post">
         <div>
-            <label for="email">Adresse mail : </label>
+            <label for="email">Adresse mail</label>
             <input id="email" type="email" name="email" value="<?php echo $email;?>" placeholder="Email" required>
             <div class="erreurs_formulaires"><?php echo $erreurAdresseMail;?></div>
         </div>
         
         <div>
-            <label for="password">Mot de passe : </label>
+            <label for="password">Mot de passe</label>
             <input id="password" type="password" name="password" placeholder="Mot de passe" required>
             <div class="erreurs_formulaires"><?php echo $erreurMotDePasse;?></div>
         </div>
@@ -49,6 +53,5 @@ if($_POST){
         <div class="erreurs_formulaires"><?php echo $erreurConnexion;?></div>
     </form>
 </main>
-<?php
-require_once("include/footer.inc.php");
-?>
+<?php/*
+include_once('include/footer.inc.php');*/

@@ -8,14 +8,13 @@ class UtilisateurManager {
         $this->db = $db;
     }
     
-    public function add($last_name,$first_name,$username,$email,$date_birthday,$password,$image_profil){
-        $sql='INSERT INTO users(last_name,first_name,username,email,date_birthday,password,image_profil) VALUES (:last_name,:first_name,:username,:email,:date_birthday,:password,:image_profil)';
+    public function add($last_name,$first_name,$username,$email,$password,$image_profil){
+        $sql='INSERT INTO users(last_name,first_name,username,email,password,image_profil) VALUES (:last_name,:first_name,:username,:email,:password,:image_profil)';
         $requete=$this->db->prepare($sql);
         $requete->bindValue(':last_name',$last_name);
         $requete->bindValue(':first_name',$first_name);
         $requete->bindValue(':username',$username);
         $requete->bindValue(':email',$email);
-        $requete->bindValue(':date_birthday',$date_birthday);
         $requete->bindValue(':password',$password);
         $requete->bindValue(':image_profil',basename($image_profil['name']));
         $requete->execute();

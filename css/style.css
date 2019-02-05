@@ -1,6 +1,5 @@
 html{
     cursor: url("../images/curseur/patte_chien.gif"), pointer;
-    min-height:100vh;
 }
 
 main {
@@ -29,4 +28,66 @@ img{
 #texte_logo{
      text-align:center;
     font-size:1.2em;
+}
+
+footer{
+    padding:10px;
+    background-color:black;
+}
+
+footer ul{
+    list-style: none;
+    padding:0;
+    margin:0;
+    display:flex;
+    justify-content: space-around;
+}
+
+footer ul li a{
+    color:white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#logo_site {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition:         transform .8s ease-in-out;
+}
+#logo_site:hover {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+
+#page_credits,#page_mentions_legales,#page_faq{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+#page_credits div{
+    font-size:1.1em;
+}
+
+.questions_faq{
+    font-weight: bold;
+    font-size:1.2em;
+}
+
+button{
+    display:block;
+    margin:30px auto;
+    border:none;
+    padding:10px;
+    background-color:#dbff3d;
+    color:#028090;
+    font-weight: bold;
+    font-size:1.2em;
+    border-radius:5px;
+}
+
+button:hover,#logo_site:hover{
+    cursor:pointer;
 }
