@@ -73,7 +73,7 @@ if($_POST){
         $_SESSION['id'] = $dbo->lastInsertId();
         $folder='images/utilisateurs/';
         move_uploaded_file($_FILES['image_profil']['tmp_name'],$folder.$_SESSION['id'].'_'.basename($_FILES['image_profil']['name']));
-        //header('Location:index.php');
+        header('Location:index.php');
     }
 }
 ?>
