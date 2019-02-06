@@ -11,7 +11,7 @@ include_once('classes/Mypdo.class.php');?>
         <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>
             <li class="nav-item"><a class="nav-link" href="categories.php">Animaux</a></li>
-            <li class="nav-item"><a class="nav-link" href="events_liste.php">Evenements</a></li>
+            <li class="nav-item"><a class="nav-link" href="events_liste.php">Évènements</a></li>
             <li class="nav-item"><a class="nav-link" href="veterinaires_liste.php">Vétérinaires</a></li>
             <?php if(empty($_SESSION['id'])){ ?>
             <li class="nav-item"><a class="nav-link" href="connexion.php">Connexion</a></li>

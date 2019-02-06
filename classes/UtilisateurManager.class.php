@@ -38,6 +38,11 @@ class UtilisateurManager {
         $user=$requete->fetch();
         return new Utilisateur($user);
     }
+
+    public function emailDejaUtilisee($email){
+        $sql="SELECT * FROM users WHERE email=:email";
+        $requete=$this->db->prepare($sql);
+    }
     
     /*
     public function selectEvenementsParSemaine($num) {
