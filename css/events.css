@@ -1,0 +1,13 @@
+#page_events{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+#prochains_events{
+    width:30%;
+}
+
+#calendar-container{
+    width:65%;
+}

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 01 fév. 2019 à 09:15
+-- Généré le :  mar. 05 fév. 2019 à 08:42
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -49,6 +49,50 @@ INSERT INTO `animals` (`id`, `idCategorie`, `libelle`, `description`, `image`) V
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `animal_photo`
+--
+
+DROP TABLE IF EXISTS `animal_photo`;
+CREATE TABLE IF NOT EXISTS `animal_photo` (
+  `idAnimal` int(11) NOT NULL,
+  `photo` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `animal_photo`
+--
+
+INSERT INTO `animal_photo` (`idAnimal`, `photo`) VALUES
+(5, 'rongeurs.jpg'),
+(6, 'canides.jpg'),
+(6, 'equides.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `animal_proprietaire`
+--
+
+DROP TABLE IF EXISTS `animal_proprietaire`;
+CREATE TABLE IF NOT EXISTS `animal_proprietaire` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idProprietaire` int(11) NOT NULL,
+  `nom` varchar(50) NOT NULL,
+  `description` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `animal_proprietaire`
+--
+
+INSERT INTO `animal_proprietaire` (`id`, `idProprietaire`, `nom`, `description`) VALUES
+(6, 28, 'Hamtaro2', 'Le fake hamtaro'),
+(5, 28, 'Hamtaro', 'Un magnifique hamster');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `categories`
 --
 
@@ -71,6 +115,67 @@ INSERT INTO `categories` (`id`, `libelle`, `image`) VALUES
 (4, 'Léporidés', 'leporides.jpg'),
 (5, 'Reptiles', 'reptiles.jpg'),
 (6, 'Rongeurs', 'rongeurs.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `events`
+--
+
+DROP TABLE IF EXISTS `events`;
+CREATE TABLE IF NOT EXISTS `events` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `date_start` date NOT NULL,
+  `hour_start` time NOT NULL,
+  `date_end` date NOT NULL,
+  `hour_end` time NOT NULL,
+  `zip_code` varchar(50) NOT NULL,
+  `name_city` varchar(50) NOT NULL,
+  `street_address` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `limited_number_participant` int(11) NOT NULL,
+  `date_created` datetime NOT NULL,
+  `picture` varchar(50) NOT NULL,
+  `is_published` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `events`
+--
+
+INSERT INTO `events` (`id`, `id_user`, `name`, `date_start`, `hour_start`, `date_end`, `hour_end`, `zip_code`, `name_city`, `street_address`, `description`, `limited_number_participant`, `date_created`, `picture`, `is_published`) VALUES
+(1, 28, 'Anniv logoon', '2019-08-20', '20:00:00', '2019-08-20', '23:30:00', '44200', 'Nantes', '8, rue konrad adenauer', 'Anniv de Logoon\r\n\r\nPS : Je veux une switch', 20, '2019-02-04 23:39:22', 'Anniv logoon hqdefault.jpg', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `events_comments`
+--
+
+DROP TABLE IF EXISTS `events_comments`;
+CREATE TABLE IF NOT EXISTS `events_comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_event` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `body` text NOT NULL,
+  `date_created` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `events_participants`
+--
+
+DROP TABLE IF EXISTS `events_participants`;
+CREATE TABLE IF NOT EXISTS `events_participants` (
+  `id_event` int(11) NOT NULL,
+  `id_users` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -164,24 +269,24 @@ CREATE TABLE IF NOT EXISTS `users` (
   `first_name` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `date_birthday` date NOT NULL,
   `password` varchar(255) NOT NULL,
   `image_profil` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `last_name`, `first_name`, `username`, `email`, `date_birthday`, `password`, `image_profil`) VALUES
-(28, 'Le Saux', 'Logan', 'loganls', 'logan.lesaux@gmail.com', '1998-08-20', 'c66d115d72475c1427c745dcf1d8e86caa4f36a2', 'image_defaut_utilisateur_01.jpg'),
-(27, 'aaaaaa', 'aaaaaa', 'aaaaaa', 'az@gmail.com', '1000-10-10', 'f7a9e24777ec23212c54d7a350bc5bea5477fdbb', 'image_defaut_utilisateur_02.jpg'),
-(26, 'aaaaaa', 'aaaaaa', 'aaaaaa', 'az@gmail.com', '1000-10-10', 'f7a9e24777ec23212c54d7a350bc5bea5477fdbb', 'image_defaut_utilisateur_02.jpg'),
-(25, 'aaaaaa', 'aaaaaa', 'aaaaaa', 'az@gmail.com', '9542-10-10', 'f7a9e24777ec23212c54d7a350bc5bea5477fdbb', 'image_defaut_utilisateur_02.jpg'),
-(24, 'aaaaaa', 'aaaaaa', 'aaaaaa', 'az@gmail.com', '1998-10-10', 'f7a9e24777ec23212c54d7a350bc5bea5477fdbb', 'image_defaut_utilisateur_02.jpg'),
-(22, 'Le Saux', 'Logan', 'loganls', 'logan.lesaux@gmail.com', '1998-08-20', 'c66d115d72475c1427c745dcf1d8e86caa4f36a2', '0 image_defaut_utilisateur_01.jpg'),
-(23, 'aaaa', 'bfbbf', 'aaaaa', 'az@gmail.com', '1752-04-15', 'f7a9e24777ec23212c54d7a350bc5bea5477fdbb', '0 image_defaut_utilisateur_03.jpg');
+INSERT INTO `users` (`id`, `last_name`, `first_name`, `username`, `email`, `password`, `image_profil`) VALUES
+(28, 'Le Saux', 'Logan', 'loganls', 'logan.lesaux@gmail.com', 'c66d115d72475c1427c745dcf1d8e86caa4f36a2', 'image_defaut_utilisateur_01.jpg'),
+(27, 'aaaaaa', 'aaaaaa', 'aaaaaa', 'az@gmail.com', 'f7a9e24777ec23212c54d7a350bc5bea5477fdbb', 'image_defaut_utilisateur_02.jpg'),
+(26, 'aaaaaa', 'aaaaaa', 'aaaaaa', 'az@gmail.com', 'f7a9e24777ec23212c54d7a350bc5bea5477fdbb', 'image_defaut_utilisateur_02.jpg'),
+(25, 'aaaaaa', 'aaaaaa', 'aaaaaa', 'az@gmail.com', 'f7a9e24777ec23212c54d7a350bc5bea5477fdbb', 'image_defaut_utilisateur_02.jpg'),
+(24, 'aaaaaa', 'aaaaaa', 'aaaaaa', 'az@gmail.com', 'f7a9e24777ec23212c54d7a350bc5bea5477fdbb', 'image_defaut_utilisateur_02.jpg'),
+(22, 'Le Saux', 'Logan', 'loganls', 'logan.lesaux@gmail.com', 'c66d115d72475c1427c745dcf1d8e86caa4f36a2', '0 image_defaut_utilisateur_01.jpg'),
+(23, 'aaaa', 'bfbbf', 'aaaaa', 'az@gmail.com', 'f7a9e24777ec23212c54d7a350bc5bea5477fdbb', '0 image_defaut_utilisateur_03.jpg'),
+(29, 'Rajao', 'Cynthia', 'cynthia', 'cynnn@gmail.com', '45cdf1109c98a42c551e84977251764946dbb432', 'hqdefault.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

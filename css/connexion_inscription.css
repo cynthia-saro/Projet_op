@@ -1,0 +1,157 @@
+#bloc_header_connexion_inscription{
+    display:flex;
+    justify-content: center;
+}
+
+#logo_site{
+    width:50%;
+}
+
+img{
+    max-width:100%;
+}
+
+#bloc_ci{
+    display:flex;
+    justify-content: space-between;
+    border-bottom:2px solid #dbff3d;
+    width:60%;
+    text-decoration:none;
+    margin:30px auto;
+    font-size:1.4em;
+}
+
+#bloc_ci div{
+    padding:5px;
+    text-align:center;
+}
+
+#selected{
+    background-color:#dbff3d;
+    width:50%;
+}
+
+#non_selected{
+    width:50%;
+}
+
+#selected a{
+    color:#028090;
+}
+
+#non_selected a{
+    color:#dbff3d;
+}
+
+a{
+   text-decoration:none;
+}
+
+a:hover{
+    color:#028090;
+    text-decoration:none;
+}
+
+body{
+    margin:0;
+}
+
+main{
+    margin:0 auto;
+    width:30%;
+}
+
+html{
+    background-color:#028090;
+    cursor: url("../images/curseur/patte_chien.gif"), pointer;
+}
+
+header{
+    margin-top:30px;
+}
+
+label,input{
+    width:100%;
+}
+
+label,div{
+    color:white;
+    font-size:1.1em;
+}
+
+input{
+    margin-bottom:15px;
+    padding:5px;
+    text-align:center;
+    border-radius:5px;
+}
+
+::placeholder{
+    color:#028090;
+}
+
+button{
+    display:block;
+    margin:30px auto;
+    border:none;
+    padding:10px;
+    background-color:#dbff3d;
+    color:#028090;
+    font-weight: bold;
+    font-size:1.4em;
+    border-radius:5px;
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+#message_input_file{
+    text-align:center;
+}
+
+form{
+    width:70%;
+    margin:0 auto;
+}
+
+footer{
+    padding:10px;
+    background-color:black;
+    position:absolute;
+    width:100%;
+    bottom:0;
+}
+
+footer ul{
+    list-style: none;
+    padding:0;
+    margin:0;
+    display:flex;
+    justify-content: space-around;
+}
+
+footer ul li a{
+    color:white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* VERSION TABLETTE */
+@media screen and (min-width:600px) {
+    #logo_site{
+        width:20%;
+    }
+}
+
+/* VERSION BUREAU */
+@media screen and (min-width:950px) {
+    #logo_site{
+        width:12%;
+    }
+}
