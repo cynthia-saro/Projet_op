@@ -14,7 +14,9 @@ $stmt = $dbo->prepare($sql);
 $stmt->bindValue(":id",$_GET['id']);
 $stmt->execute();
 $photos = $stmt -> fetchAll();
+
 ?>
+
 <main>
     <div id="bloc_profil_utilisateur">
         <div id="image_utilisateur_profil"><img src="images/utilisateurs/<?php echo $utilisateur->getId().'_'.$utilisateur->getImageProfil();?>"></div>
@@ -25,15 +27,6 @@ $photos = $stmt -> fetchAll();
             </div>
         </div>
     </div>
-    <div class="posts">
-      <?php foreach ($photos as $photo){
-        ?> <div class="post">
-            <a href="post.php?id=<?php echo $photo->id?>&idanimal="<?php echo $photo->idAnimal?>>
-            <img src="images/animaux/<?php echo $photo->id."_".$photo->photo?>"  >
-          </a>
-          </div>
-        <?php } ?>
-    </div>
 
     <?php
     if(!empty($_SESSION['id'])){
@@ -42,6 +35,26 @@ $photos = $stmt -> fetchAll();
         <?php
         }
     } ?>
+
+
+    <div class="posts">
+      <?php foreach ($photos as $photo){
+        ?> <div class="post">
+
+            <img src="images/animaux/<?php echo $photo->id."_".$photo->photo?>">
+            <div class="informations_animal">
+              <p> <b>nom:</b> <?php echo $photo->nom ?> </p>
+              <p> <b>description:</b> <?php echo $photo->description ?> </p>
+              <!--faire une condition pour qu'il s'affiche que quand il y a + d'une photo -> requete sql count()-->
+              <a href="post.php?id=<?php echo $photo->id?>">
+              <p> voir toutes les photos de <?php echo $photo->nom ?></p>
+              </a>
+            </div>
+          </div>
+        <?php } ?>
+    </div>
+
+
 </main>
 <?php
 require_once("include/footer.inc.php");
