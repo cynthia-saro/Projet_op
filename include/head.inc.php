@@ -26,6 +26,7 @@ require_once("include/functions.inc.php");
     <link rel="stylesheet" href="css/animaux.css">
     <link rel="stylesheet" href="css/profil.css">
     <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/veterinaire.css">
 
     <!-- CALENDAR -->
     <link rel='stylesheet' href='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.css'>
