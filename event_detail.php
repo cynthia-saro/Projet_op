@@ -59,7 +59,7 @@ $commentaires=$stmt->fetchAll();
     <main class="container" id="page_detail_event">
         <h1 class="text_center">Détail de l'événement "<?php echo $detail_evenement->name;?>"</h1>
         <h2 class="text_center">Organisé par <?php echo $createur_evenement->last_name.' '.$createur_evenement->first_name;?></h2>
-        <img class="bloc_center" src="images/<?php echo $detail_evenement->picture;?>">
+        <img class="bloc_center" src="images/events/<?php echo $_GET['id'].'_'.$detail_evenement->picture;?>">
         <div id="bloc_detail_evenement" class="row">
 
             <div class="col-sm-8 card">
