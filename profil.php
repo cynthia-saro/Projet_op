@@ -27,7 +27,7 @@ $photos = $stmt -> fetchAll();
     </div>
     <div class="posts">
       <?php foreach ($photos as $photo){
-        ?> <div>
+        ?> <div class="post">
             <img src="images/animaux/<?php echo $photo->id."_".$photo->photo?>">
           </div>
         <?php } ?>
