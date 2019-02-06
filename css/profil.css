@@ -39,3 +39,15 @@
 #informations_utilisateur h1{
     text-align:center;
 }
+
+.posts{
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.post{
+  width: 30%;
+  height: 250px;
+  padding-bottom: 20px;
+}
