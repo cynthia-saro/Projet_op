@@ -25,6 +25,7 @@
     border-radius:8px;
     margin-bottom:5px;
     position: relative;
+    width:100%;
 }
 
 .date_commentaire{
@@ -79,4 +80,13 @@
 .liste_prochains_events a{
     text-decoration: none;
     color:black;
+}
+
+#formulaire_detail_event{
+    width:80%;
+    margin:15px auto 0 auto;
+}
+
+#page_detail_event img{
+    margin: 0 auto;
 }

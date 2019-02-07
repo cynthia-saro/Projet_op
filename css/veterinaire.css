@@ -1,4 +1,4 @@
-.container {
+#liste_veto {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -22,8 +22,8 @@ li {
     display: flex;
 }
 
-p {
-    text-transform: bolder;
+.coordonnee p {
+    font-weight: bold;
     margin: 0;
     padding-right: 10px;
 }

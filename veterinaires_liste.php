@@ -4,7 +4,7 @@ require_once("include/header.inc.php");
 ?>
     <main>
         <h1> Les vétérinaires </h1>
-        <div class="container">
+        <div id="liste_veto">
     
         <ul class="coordonnee">
             <li><p>Nom:</p><p class="donnee">RAJAO</p></li>

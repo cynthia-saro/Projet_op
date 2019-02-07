@@ -118,7 +118,7 @@ $commentaires=$stmt->fetchAll();
         <h2 class="h2">Espace commentaires</h2>
         <?php
         if(!empty($_SESSION['id'])){ ?>
-            <form action="php/ajouter_commentaire.php" method="post">
+            <form id="formulaire_detail_event" action="php/ajouter_commentaire.php" method="post">
 
                 <div class="form-group">
                     <textarea class="form-control" name="commentaire" placeholder="Votre commentaire ..."></textarea>
