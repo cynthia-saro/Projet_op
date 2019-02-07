@@ -13,7 +13,7 @@ $animaux=$animalManager->getAllAnimauxOfOneCategorie($_GET['idCategorie']);
             foreach($animaux as $animal) {
             ?>
             <div style="cursor:pointer" class="animaux"" data-id-animal="<?php echo $animal->getId();?>">
-            <img src="images/animaux/<?php echo $animal->getImage();?>">
+            <img src="images/categories_animaux/<?php echo $animal->getImage();?>">
             <div><?php echo $animal->getLibelle();?></div>
         </div>
         <?php

@@ -4,7 +4,7 @@ include_once('classes/Mypdo.class.php');?>
 <header>
     <div id="bloc_header_connexion_inscription">
         <div id="logo_site">
-            <img src="images/mironos.png">
+            <img src="images/mironos_2.png">
         </div>
     </div>
 </header>

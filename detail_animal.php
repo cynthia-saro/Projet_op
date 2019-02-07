@@ -9,7 +9,7 @@ $animal=$animalManager->getAnimal($_GET['idAnimal']);
 ?>
     <main>
         <h1>Comment s'occuper d'un <?php echo $animal->getLibelle();?> ?</h1>
-        <img src="images/animaux/<?php echo $animal->getImage();?>">
+        <img src="images/categories_animaux/<?php echo $animal->getImage();?>">
         <p><?php echo $animal->getDescription();?></p>
     </main>
 <?php
