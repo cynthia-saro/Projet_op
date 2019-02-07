@@ -16,7 +16,7 @@ h1 {
     margin-bottom: 50px;
 }
 
-li {
+#liste_veto li {
     list-style: none;
     padding: 10px;
     display: flex;
