@@ -42,10 +42,10 @@
 }
 
 .posts{
-  margin: 20px;
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+    justify-content: space-between;
 }
 
 .post{
@@ -54,18 +54,21 @@
 
 /* VERSION TABLETTE */
 @media screen and (min-width:600px){
-    .post{
+    .post {
         width: 30%;
     }
 
-    .post img{
-        border-radius:8px;
+    .post img {
+        border-radius: 8px;
     }
 }
-
 /* VERSION BUREAU */
 @media screen and (min-width:950px){
+    .post {
+        width: 30%;
+    }
 
+    .post img {
+        border-radius: 8px;
+    }
 }
-
-
