@@ -30,8 +30,6 @@ img{
     font-size:1.2em;
 }
 
-<<<<<<< HEAD
-=======
 footer{
     padding:10px;
     background-color:black;
@@ -93,4 +91,11 @@ button{
 button:hover,#logo_site:hover{
     cursor:pointer;
 }
->>>>>>> 23cb3cc6e0f0f870ecb51f80b38e03e9e67cf9d3
+
+body{
+    background-color:#028090;
+}
+
+.fas{
+    cursor:pointer;
+}

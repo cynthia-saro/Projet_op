@@ -8,12 +8,12 @@ $evenementsManager=new evenementsManager($dbo);
 ?>
     <main id="page_events">
         <div id="prochains_events">
-            <ul class="list-group block1">
-                <li class="list-group-item active">Prochains événements</li>
+            <ul>
+                <li id="titre_liste_prochains_events">Prochains événements</li>
                 <?php
                 $events=$evenementsManager->getFutureEvents();
                 foreach($events as $event){ ?>
-                    <li class="list-group-item"><a href="event_detail.php?id=<?php echo $event->getId();?>"><?php echo $event->getName();?></a></li>
+                    <li class="liste_prochains_events"><a href="event_detail.php?id=<?php echo $event->getId();?>"><?php echo $event->getName();?></a></li>
                     <?php
                 }
                 ?>

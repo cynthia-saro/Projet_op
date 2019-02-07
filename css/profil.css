@@ -9,9 +9,10 @@
 #bloc_profil_utilisateur{
     position:relative;
     display:flex;
-    border:1px solid green;
+    border:2px solid green;
     border-radius:10px;
     overflow:hidden;
+    background-color:whitesmoke;
 }
 
 #bloc_profil_utilisateur #image_utilisateur_profil{
@@ -46,8 +47,25 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .post{
-  width: 30%;
-  height: 250px;
-  padding-bottom: 20px;
+  width: 33.33333333%;
 }
+
+/* VERSION TABLETTE */
+@media screen and (min-width:600px){
+    .post{
+        width: 30%;
+    }
+
+    .post img{
+        border-radius:8px;
+    }
+}
+
+/* VERSION BUREAU */
+@media screen and (min-width:950px){
+
+}
+
+
