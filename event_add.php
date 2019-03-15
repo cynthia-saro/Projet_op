@@ -49,6 +49,8 @@ if($_POST) {
 
                 //Enregistrement de l'image dans le dossier images
                 move_uploaded_file($_FILES['picture']['tmp_name'], 'images/events/' . $event_id . '_' . basename($_FILES['picture']['name']));
+                //Enregistrement de l'image dans le dossier images
+                move_uploaded_file($_FILES['picture']['tmp_name'], '../projet_op_admin/images/events/' . $event_id . '_' . basename($_FILES['picture']['name']));
             }
         }
     } else {
