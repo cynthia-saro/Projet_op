@@ -4,8 +4,15 @@ html{
 
 main {
     width: 70%;
-    margin: 20px auto 0;
+    margin: 0 auto;
+    padding:10px 30px;
 }
+
+h1{
+    text-align:center;
+}
+
+body{background-color:#028090;}
 
 img{
     display:block;
@@ -91,10 +98,44 @@ button:hover,#logo_site:hover{
     cursor:pointer;
 }
 
-body{
-    background-color:#028090;
-}
-
 .fas{
     cursor:pointer;
+}
+
+label,input,textarea{
+    width:100%;
+}
+
+textarea{
+    max-width:100%;
+    max-height:150px;
+}
+
+label,form div{
+    color:white;
+    font-size:1.1em;
+}
+
+input{
+    margin-bottom:15px;
+    padding:5px;
+    text-align:center;
+    border-radius:5px;
+}
+
+::placeholder{
+    color:#028090;
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+#message_input_file{
+    text-align:center;
+}
+
+form{
+    width:70%;
+    margin:0 auto;
 }

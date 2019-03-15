@@ -62,10 +62,9 @@ if($_POST) {
 
 ?>
     <main>
-        <div class="card contenu_page">
+        <div>
 
             <h1 class="h2">Ajouter un évènement</h1>
-            <strong>Votre événement sera validé par un administrateur avant d'être diffusé sur notre site.</strong>
 
             <form action="event_add.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
@@ -89,16 +88,16 @@ if($_POST) {
                     <input class="form-control" type="time" name="hour_end" id="hour_end" required>
                 </div>
                 <div class="form-group">
-                    <label for="picture">Photo</label>
-                    <input class="form-control" type="file" name="picture" id="picture" accept=".jpg, .jpeg, .png" required>
-                </div>
-                <div class="form-group">
                     <label for="description">Description</label>
                     <textarea class="form-control" name="description" id="description" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="limited_number_participants">Nombre limite de participants</label>
                     <input class="form-control" type="number" name="limited_number_participants" id="limited_number_participants" required>
+                </div>
+                <div class="form-group">
+                    <label for="picture">Photo</label>
+                    <input type="file" name="picture" id="picture" accept=".jpg, .jpeg, .png" required>
                 </div>
 
                 <h2 class="h2">Adresse de l'événement</h2>
@@ -123,7 +122,7 @@ if($_POST) {
                     ?>
                 </div>
                 <div>
-                    <button class="btn btn-outline-dark" type="submit">Créer l'événement</button>
+                    <button type="submit">Créer l'événement</button>
                 </div>
             </form>
         </div>

@@ -6,8 +6,11 @@ include_once('classes/categorieManager.class.php');
 $pdo=new Mypdo();
 $animalManager=new animalManager($pdo);
 $animaux=$animalManager->getAllAnimauxOfOneCategorie($_GET['idCategorie']);
+$categorieManager=new categorieManager($pdo);
+$categorie=$categorieManager->getNomCategorieAnimauxById($_GET['idCategorie']);
 ?>
     <main>
+        <h1>Liste des <?php echo $categorie->getLibelle() ;?></h1>
         <div id="liste_animaux">
             <?php
             foreach($animaux as $animal) {

@@ -4,11 +4,6 @@
     flex-wrap: wrap;
 }
 
-h1 {
-    margin: 50px 0;
-    text-align: center;
-}
-
 .coordonnee {
     padding: 20px;
     border: solid 1px black;

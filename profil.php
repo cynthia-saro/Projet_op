@@ -21,11 +21,43 @@ $photos = $stmt -> fetchAll();
     <div id="bloc_profil_utilisateur">
         <div id="image_utilisateur_profil"><img src="images/utilisateurs/<?php echo $utilisateur->getId().'_'.$utilisateur->getImageProfil();?>"></div>
         <div id="informations_utilisateur">
-            <h1><?php echo $utilisateur->getLastName().' '.$utilisateur->getFirstName();?></h1>
+            <h1><?php echo strtoupper ($utilisateur->getLastName()).' '.$utilisateur->getFirstName();?></h1>
             <div id="liste_informations_utilisateur">
                 <div><i class="far fa-user"></i><span class="liste_info_user"><?php echo $utilisateur->getUsername();?></span></div>
             </div>
         </div>
+    </div>
+
+    <div id="bloc_commentaire">
+        <?php //ajouter un commentaire ?>
+        <form action="php/ajouter_commentaire_profil.php?idProfil=<?php echo $_GET['id'];?>" method="post">
+            <textarea name="commentaire" placeholder="Ecrire un commentaire ..."></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <?php //Liste des commentaires de ce profil ?>
+        <?php
+        $sql="SELECT idUserAuthor,content,dateCreated,last_name,first_name,image_profil
+            FROM users u
+            INNER JOIN user_comments uc
+            ON u.id=uc.idUserAuthor
+            WHERE idUserReceiver=:idProfil";
+        $stmt = $dbo->prepare($sql);
+        $stmt->bindValue(":idProfil",$_GET['id']);
+        $stmt->execute();
+        $comments = $stmt -> fetchAll();
+        foreach($comments as $comment){ ?>
+            <div class="bloc_commentaire_profil">
+                <div class="commentaire_profil">
+                    <?php echo $comment->content;?>
+                </div>
+                <div class="commentaire_date">
+                    <?php echo 'Message posté le '.utf8_encode(strftime('%A %d %B',strtotime($comment->dateCreated)));?>
+                </div>
+            </div>
+        <?php
+        }
+        ?>
     </div>
 
     <?php
