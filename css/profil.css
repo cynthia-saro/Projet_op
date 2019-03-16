@@ -9,9 +9,10 @@
 #bloc_profil_utilisateur{
     position:relative;
     display:flex;
-    border:1px solid green;
+    border:2px solid green;
     border-radius:10px;
     overflow:hidden;
+    background-color:whitesmoke;
 }
 
 #bloc_profil_utilisateur #image_utilisateur_profil{
@@ -41,13 +42,66 @@
 }
 
 .posts{
-  margin: 20px;
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+    justify-content: space-between;
 }
+
 .post{
-  width: 30%;
-  height: 250px;
-  padding-bottom: 20px;
+  width: 33.33333333%;
+}
+
+.cadre_liste_user{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    margin:15px 0 15px 0;
+}
+
+.cadre_user{
+    width:15%;
+}
+
+.cadre_nom_prenom{
+    background-color:#dbff3d;
+    text-align:center;
+}
+
+#bloc_commentaire{
+    margin-top:20px;
+}
+
+.bloc_commentaire_profil{
+    background-color:whitesmoke;
+    margin-top:10px;
+    position:relative;
+    padding:15px;
+}
+
+.commentaire_date{
+    position:absolute;
+    top:2px;
+    right:2px;
+}
+
+/* VERSION TABLETTE */
+@media screen and (min-width:600px){
+    .post {
+        width: 30%;
+    }
+
+    .post img {
+        border-radius: 8px;
+    }
+}
+/* VERSION BUREAU */
+@media screen and (min-width:950px){
+    .post {
+        width: 30%;
+    }
+
+    .post img {
+        border-radius: 8px;
+    }
 }

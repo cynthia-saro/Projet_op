@@ -10,4 +10,83 @@
 
 #calendar-container{
     width:65%;
+    background-color:dimgrey;
+    padding:8px;
+    margin-bottom:10px;
+}
+
+#page_detail_event{
+    margin-bottom:10px;
+}
+
+.bloc_liste_commentaires{
+    padding:5px 10px;
+    background-color:whitesmoke;
+    border-radius:8px;
+    margin-bottom:5px;
+    position: relative;
+    width:100%;
+}
+
+.date_commentaire{
+    position:absolute;
+    top:0;
+    right:5px;
+}
+
+.contenu_commentaire{
+    font-size:1.1em;
+}
+
+#table_participants{
+    background-color:whitesmoke;
+}
+
+#table_participants td{
+    text-align:center;
+}
+
+#table_participants thead{
+    font-size:1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#description_event{
+    background-color:whitesmoke;
+    padding:5px 10px;
+    margin-top:10px;
+    border-radius:8px;
+}
+
+#prochains_events li{
+    list-style: none;
+    padding:10px;
+}
+
+#titre_liste_prochains_events{
+    background-color:#dbff3d;
+    border-radius:8px 8px 0 0;
+    text-transform: uppercase;
+    text-align:center;
+    font-weight: bold;
+    font-size:1.2em;
+}
+
+.liste_prochains_events{
+    background-color:whitesmoke;
+}
+
+.liste_prochains_events a{
+    text-decoration: none;
+    color:black;
+}
+
+#formulaire_detail_event{
+    width:80%;
+    margin:15px auto 0 auto;
+}
+
+#page_detail_event img{
+    margin: 0 auto;
 }

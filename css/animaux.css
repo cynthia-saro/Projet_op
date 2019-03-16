@@ -16,7 +16,6 @@
 #liste_categories_animaux img:hover,#liste_animaux img:hover  {
     -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
     filter: grayscale(0%); /* Firefox */
-    border:2px solid #028090;
     border-radius:8px 8px 0 0;
 }
 
@@ -28,10 +27,12 @@
 .categories_animaux div,.animaux div{
     width:100%;
     text-align:center;
-    background-color:#028090;
+    background-color:black;
     color:white;
     font-weight: bold;
 }
+
+
 
 /* VERSION TABLETTE */
 @media screen and (min-width:600px){

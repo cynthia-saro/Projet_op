@@ -5,28 +5,27 @@ include_once('classes/Mypdo.class.php');
 $dbo=new Mypdo();
 $utilisateurManager=new UtilisateurManager($dbo);
 
-$sql="SELECT * FROM `animal_proprietaire` where id=:id";
+
+
+/*on cherche la photo de l'animal*/
+$sql="SELECT *
+      FROM animal_photo
+      WHERE idAnimal=:id";
 $stmt = $dbo->prepare($sql);
 $stmt->bindValue(":id",$_GET['id']);
 $stmt->execute();
-$info = $stmt -> fetch();
+$animalphotos = $stmt -> fetchAll();
 
-/*on cherche la photo de l'animal
-$sql="SELECT photo FROM animal_photo a1
-      JOIN animal_proprietaire a2
-      ON a1.idAnimal=a2.id
-      WHERE idProprietaire=:id";
-$stmt = $dbo->prepare($sql);
-$stmt->bindValue(":id",$_GET['idAnimal']);
-$stmt->execute();
-$info = $stmt -> fetch();*/
 ?>
 
 
 <main>
-    <div>
-      <h2> nom: <?php echo $info->nom ?> </h2>
-      <p> description: <?php echo $info->description ?> </p>
+    <div class="images_animal">
+
+      <?php foreach ($animalphotos as $photo){
+        ?>
+        <img src="images/animaux/<?php echo $_GET['id']."_".$photo->photo?>">
+        <?php } ?>
     </div>
 </main>
 <?php

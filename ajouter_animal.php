@@ -21,7 +21,8 @@ if($_POST){
     header("Location:profil.php?id=$id");
 }
 ?>
-    <main>
+    <main id="page_ajouter_animal">
+        <h1>Ajouter un animal</h1>
         <form action="ajouter_animal.php" method="post" enctype="multipart/form-data">
             <div>
                 <label for="nom_animal">Nom animal</label>

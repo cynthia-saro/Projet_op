@@ -4,3 +4,8 @@ $('#liste_images_defaut_profil img').on('click',function(){
     $('#image_profil').val(nom_image);
     alert($('#image_profil').val());
 });
+
+$('.cadre_user').on('click',function(){
+    let id_user=$(this).attr('data-id');
+    location.href="profil.php?id="+id_user;
+});

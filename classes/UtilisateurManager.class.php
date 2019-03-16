@@ -43,6 +43,22 @@ class UtilisateurManager {
         $sql="SELECT * FROM users WHERE email=:email";
         $requete=$this->db->prepare($sql);
     }
+
+    public function getAllUsers(){
+        $listeUsers = array();
+
+        $sql = 'SELECT * FROM users';
+
+        $requete = $this->db->prepare($sql);
+        $requete->execute();
+
+        while ($user = $requete->fetch(PDO::FETCH_OBJ)) {
+            $listeUsers[] = new Utilisateur($user);
+        }
+
+        $requete->closeCursor();
+        return $listeUsers;
+    }
     
     /*
     public function selectEvenementsParSemaine($num) {

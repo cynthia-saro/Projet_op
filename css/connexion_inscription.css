@@ -15,10 +15,11 @@ img{
     display:flex;
     justify-content: space-between;
     border-bottom:2px solid #dbff3d;
-    width:60%;
+    width:100%;
     text-decoration:none;
     margin:30px auto;
     font-size:1.4em;
+    position: relative;
 }
 
 #bloc_ci div{

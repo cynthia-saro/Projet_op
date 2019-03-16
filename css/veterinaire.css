@@ -1,12 +1,7 @@
-.container {
+#liste_veto {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
-
-h1 {
-    margin: 50px 0;
-    text-align: center;
 }
 
 .coordonnee {
@@ -16,14 +11,14 @@ h1 {
     margin-bottom: 50px;
 }
 
-li {
+#liste_veto li {
     list-style: none;
     padding: 10px;
     display: flex;
 }
 
-p {
-    text-transform: bolder;
+.coordonnee p {
+    font-weight: bold;
     margin: 0;
     padding-right: 10px;
 }
