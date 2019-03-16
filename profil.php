@@ -52,7 +52,7 @@ $photos = $stmt -> fetchAll();
                     <?php echo $comment->content;?>
                 </div>
                 <div class="commentaire_date">
-                    <?php echo 'Message posté le '.utf8_encode(strftime('%A %d %B',strtotime($comment->dateCreated)));?>
+                    <?php echo 'Message posté le '.utf8_encode(strftime('%A %d %B',strtotime($comment->dateCreated))).' par : '.$comment->first_name.' '.strtoupper($comment->last_name);?>
                 </div>
             </div>
         <?php
