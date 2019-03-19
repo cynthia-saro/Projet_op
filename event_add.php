@@ -66,7 +66,9 @@ if($_POST) {
     <main>
         <div>
 
-            <h1 class="h2">Ajouter un évènement</h1>
+            <h1>Ajouter un évènement</h1>
+
+            <p style="text-align:center;font-size:1.1em">Votre évènement sera validé par un administrateur avant d'être diffusé sur notre site !</p>
 
             <form action="event_add.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">

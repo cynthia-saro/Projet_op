@@ -9,6 +9,7 @@
 
 img{
     max-width:100%;
+    display:block;
 }
 
 #bloc_ci{
@@ -93,7 +94,7 @@ input{
 
 button{
     display:block;
-    margin:30px auto;
+    margin:10px auto;
     border:none;
     padding:10px;
     background-color:#dbff3d;
@@ -142,9 +143,29 @@ footer ul li a:hover {
     text-decoration: none;
 }
 
+#liste_image_animaux{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    margin-top:50px;
+}
+
+#liste_image_animaux .image_animal{
+    object-fit: contain;
+    width:10%;
+}
+
+#texte_connexion_inscription{
+    text-align:center;
+    font-size:1.3em;
+    width:100%;
+    left:0;
+    bottom:15%;
+    margin-top:30px;
+}
 
 /* VERSION TABLETTE */
-@media screen and (min-width:600px) {
+@media screen and (min-width:600px){
     #logo_site{
         width:20%;
     }

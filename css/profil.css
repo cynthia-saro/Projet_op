@@ -45,7 +45,7 @@
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .post{
@@ -77,18 +77,59 @@
     margin-top:10px;
     position:relative;
     padding:15px;
+    border-radius:15px;
 }
 
 .commentaire_date{
     position:absolute;
-    top:2px;
-    right:2px;
+    top:5px;
+    right:5px;
+}
+
+.table_page_profil{
+    background-color:white;
+}
+
+.cadre_photo_profil_commentaire{
+    width:60px;
+}
+
+.cadre_photo_profil_commentaire img{
+    object-fit: cover;
+    border-radius:40px;
+}
+
+.commentaire_profil{
+    padding:10px;
+}
+
+#textarea_profil{
+    padding:20px;
+    border-radius:5px;
+}
+
+.post{
+    position:relative;
+    margin-bottom:30px;
+    cursor:pointer;
+}
+
+.nom_animal{
+    position:absolute;
+    left:0;
+    bottom:0;
+    background-color:#dbff3d;
+    width:100%;
+    padding:5px;
+    text-align:center;
+    font-size:1.3em;
 }
 
 /* VERSION TABLETTE */
 @media screen and (min-width:600px){
     .post {
         width: 30%;
+        cursor:pointer;
     }
 
     .post img {
@@ -99,6 +140,7 @@
 @media screen and (min-width:950px){
     .post {
         width: 30%;
+        cursor:pointer;
     }
 
     .post img {

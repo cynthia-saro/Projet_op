@@ -8,6 +8,7 @@ $categorieManager=new categorieManager($pdo);
 $categories=$categorieManager->getAllCategoriesAnimaux();
 ?>
     <main>
+        <h1>Guide informatif sur les animaux</h1>
         <div id="liste_categories_animaux">
             <?php
             foreach($categories as $categorie) {

@@ -6,6 +6,7 @@ include_once('classes/evenementsManager.class.php');
 $dbo=new Mypdo();
 $evenementsManager=new evenementsManager($dbo);
 ?>
+    <h1>Liste des prochains évènements</h1>
     <main id="page_events">
         <div id="prochains_events">
             <ul>

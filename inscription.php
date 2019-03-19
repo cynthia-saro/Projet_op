@@ -78,6 +78,28 @@ if($_POST){
 }
 ?>
 <main>
+    <div id="bloc_connexion_inscription">
+        <div id="liste_image_animaux">
+            <div class="image_animal">
+                <img src="images/turtle.png">
+            </div>
+            <div class="image_animal">
+                <img src="images/rabbit.png">
+            </div>
+            <div class="image_animal">
+                <img src="images/cat.png">
+            </div>
+            <div class="image_animal">
+                <img src="images/dog.png">
+            </div>
+            <div class="image_animal">
+                <img src="images/horse.png">
+            </div>
+        </div>
+        <div id="texte_connexion_inscription">
+            Le premier réseau social destiné aux propriétaires et aux passionnés d'animaux !
+        </div>
+    </div>
     <div id="bloc_ci">
         <div id="non_selected"><a href="connexion.php">Connexion</a></div>
         <div id="selected"><a href="inscription.php">Inscription</a></div>
@@ -124,7 +146,6 @@ if($_POST){
             <div>
                 <input type="file" name="image_profil" id="image_profil" accept=".jpg, .jpeg, .png" required>
             </div>
-            <div id="message_input_file">Vous pourrez toujours modifier votre image de profil plus tard.</div>
             <!--<div id="liste_images_defaut_profil">
                 <img src="images/utilisateurs/image_defaut_utilisateur_01.jpg">
                 <img src="images/utilisateurs/image_defaut_utilisateur_02.jpg">

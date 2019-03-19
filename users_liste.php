@@ -7,6 +7,8 @@ $pdo=new Mypdo();
 $userManager=new UtilisateurManager($pdo);
 $users=$userManager->getAllUsers();
 ?>
+<main>
+    <h1>Liste des utilisateurs</h1>
 <div class="cadre_liste_user">
 <?php
 foreach($users as $user){ ?>
@@ -20,6 +22,7 @@ foreach($users as $user){ ?>
 }
 ?>
 </div>
+</main>
 
 
 <?php

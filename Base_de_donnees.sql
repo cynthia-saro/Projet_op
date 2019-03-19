@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  sam. 16 mars 2019 à 17:18
+-- Généré le :  mar. 19 mars 2019 à 18:01
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `animals` (
   `description` text NOT NULL,
   `image` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=99 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=104 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `animals`
@@ -97,7 +97,8 @@ CREATE TABLE IF NOT EXISTS `animal_photo` (
 INSERT INTO `animal_photo` (`idAnimal`, `photo`) VALUES
 (5, 'rongeurs.jpg'),
 (6, 'canides.jpg'),
-(6, 'equides.jpg');
+(6, 'equides.jpg'),
+(6, 'equides.jpg\r\n');
 
 -- --------------------------------------------------------
 
@@ -134,7 +135,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `libelle` varchar(200) NOT NULL,
   `image` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `categories`
@@ -333,6 +334,25 @@ INSERT INTO `users` (`id`, `last_name`, `first_name`, `username`, `email`, `pass
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `user_aime_comments`
+--
+
+DROP TABLE IF EXISTS `user_aime_comments`;
+CREATE TABLE IF NOT EXISTS `user_aime_comments` (
+  `idUser` int(11) NOT NULL,
+  `idComment` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `user_aime_comments`
+--
+
+INSERT INTO `user_aime_comments` (`idUser`, `idComment`) VALUES
+(28, 7);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `user_comments`
 --
 
@@ -344,7 +364,7 @@ CREATE TABLE IF NOT EXISTS `user_comments` (
   `content` text NOT NULL,
   `dateCreated` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `user_comments`
@@ -354,7 +374,9 @@ INSERT INTO `user_comments` (`id`, `idUserAuthor`, `idUserReceiver`, `content`, 
 (1, 28, 28, 'coucou toi <3', '2019-03-15 00:00:00'),
 (2, 29, 29, 'bonjour moi-même', '2019-03-13 00:00:00'),
 (3, 28, 28, 'test', '2019-03-15 13:32:26'),
-(4, 28, 28, 'test 2', '2019-03-15 13:32:38');
+(4, 28, 28, 'test 2', '2019-03-15 13:32:38'),
+(6, 28, 28, 'tu pues van, go kfc', '2019-03-19 12:57:48'),
+(7, 28, 28, 'Van est une pizda hihihi', '2019-03-19 14:26:49');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

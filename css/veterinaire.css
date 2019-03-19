@@ -6,23 +6,34 @@
 
 .coordonnee {
     padding: 20px;
-    border: solid 1px black;
-    border-radius: 2px;
+    border: solid 2px #028090;
+    border-radius: 20px;
     margin-bottom: 50px;
+    width:40%;
+    background-color:white;
 }
 
-#liste_veto li {
+.coordonnee li {
     list-style: none;
     padding: 10px;
     display: flex;
 }
 
 .coordonnee p {
-    font-weight: bold;
     margin: 0;
     padding-right: 10px;
 }
 
-.donnee {
+#liste_veto button:hover{
+    color:#dbff3d;
+    background-color:#028090;
+}
+
+h1{
+    margin-bottom:50px;
+    color:white;
+}
+
+li p:first-child{
     font-weight: bold;
 }

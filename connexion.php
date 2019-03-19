@@ -33,6 +33,28 @@ if($_POST){
 }
 ?>
 <main id="pages_connexion_inscription">
+    <div id="bloc_connexion_inscription">
+        <div id="liste_image_animaux">
+            <div class="image_animal">
+                <img src="images/turtle.png">
+            </div>
+            <div class="image_animal">
+                <img src="images/rabbit.png">
+            </div>
+            <div class="image_animal">
+                <img src="images/cat.png">
+            </div>
+            <div class="image_animal">
+                <img src="images/dog.png">
+            </div>
+            <div class="image_animal">
+                <img src="images/horse.png">
+            </div>
+        </div>
+        <div id="texte_connexion_inscription">
+            Le premier réseau social destiné aux propriétaires et aux passionnés d'animaux !
+        </div>
+    </div>
     <div id="bloc_ci">
         <div id="selected"><a href="connexion.php">Connexion</a></div>
         <div id="non_selected"><a href="inscription.php">Inscription</a></div>

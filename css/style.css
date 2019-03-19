@@ -12,7 +12,32 @@ h1{
     text-align:center;
 }
 
-body{background-color:#028090;}
+body{background-color:lightseagreen}
+
+#nav_principal{
+    background-color:#028090 !important;
+}
+
+#nav_principal ul{
+    display:flex;
+    width:60%;
+    margin:0 auto;
+    justify-content:space-around;
+    font-size:1.3em;
+}
+
+#nav_principal  ul li{
+    list-style: none;
+}
+
+#nav_principal  a{
+    text-decoration: none;
+    color:white;
+}
+
+#nav_principal  a:hover{
+    color:white;
+}
 
 img{
     display:block;
@@ -38,7 +63,7 @@ img{
 
 footer{
     padding:10px;
-    background-color:black;
+    background-color:#028090;
 }
 
 footer ul{
@@ -59,11 +84,11 @@ footer ul li a:hover {
     text-decoration: none;
 }
 
-#logo_site {
+#logo_site img{
     -webkit-transition: -webkit-transform .8s ease-in-out;
-    transition:         transform .8s ease-in-out;
+    transition:transform .8s ease-in-out;
 }
-#logo_site:hover {
+#logo_site img:hover {
     -webkit-transform: rotate(-15deg);
     transform: rotate(-15deg);
 }
@@ -138,4 +163,124 @@ button:hover{
 form{
     width:70%;
     margin:0 auto;
+}
+
+.cadre_like{
+    display:flex;
+    width:150px;
+    margin-top:10px;
+    border-radius:25px;
+}
+
+.cadre_like:hover{
+    cursor:pointer;
+    background-color:lightgreen;
+}
+
+.icon_like{
+    width:50px;
+}
+
+.icon_like img{
+    object-fit: cover;
+}
+
+.like{
+    margin:auto;
+}
+
+.cadre_liked{
+    background-color:lightgreen;
+}
+
+#images_animal_user{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    margin-top:50px;
+}
+
+.animal_photos_liste{
+    width:30%;
+}
+
+.description_animal{
+    text-align:center;
+    font-size:1.3em;
+}
+
+.cadre_photo_profil_commentaire{
+    cursor:pointer;
+}
+
+#cadre_page_posts{
+    display:flex;
+    margin:0 auto;
+}
+
+#cadre_page_posts h1{
+    width:100%;
+}
+
+.animal_photos_liste img{
+    object-fit: cover;
+}
+
+#espace_profil{
+    position:absolute;
+    top:5px;
+    right:5px;
+    width:200px;
+}
+
+#photo_profil{
+    width:50%;
+    right:0;
+}
+
+#photo_profil img{
+    object-fit: cover;
+    border-radius:50px;
+}
+
+#liste_image_animaux{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    margin-top:50px;
+}
+
+#liste_image_animaux .image_animal{
+    object-fit: contain;
+    width:8%;
+}
+
+#footer_animaux{
+    width:50%;
+    margin:0 auto;
+}
+
+/* VERSION TABLETTE */
+@media screen and (min-width:600px) and (max-width:1200px){
+    #espace_profil{
+        width:60px;
+    }
+    #photo_profil{
+        width:100%;
+    }
+    #nom_prenom{
+        display:none;
+    }
+}
+/* VERSION telephone */
+@media screen and (max-width:600px){
+    #espace_profil{
+        width:50px;
+    }
+    #photo_profil{
+        width:100%;
+    }
+    #nom_prenom{
+        display:none;
+    }
 }

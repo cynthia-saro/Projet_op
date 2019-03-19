@@ -38,7 +38,6 @@ require_once("include/header.inc.php");
 
             <button onclick="location.href='veterinaire_detail.php?id=4'">Contacter</button>
         </ul>
-    
         </div>
     </main>
 <?php
