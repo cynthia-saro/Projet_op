@@ -282,6 +282,42 @@ h2{
     object-fit: cover;
 }
 
+#description_qui_sommes_nous{
+    text-align:center;
+    font-size:1.1em;
+}
+
+#flux_index{
+    display:flex;
+    justify-content: space-between;
+}
+
+#index_gauche{
+    width:60%;
+}
+
+.index_droite{
+    width:30%;
+}
+
+#form_index{
+    display:flex;
+    justify-content: space-between;
+    margin:0;
+    width:100%;
+}
+
+#textarea_index{
+    width:70%;
+}
+
+#form_index textarea{
+    width:100%;
+}
+
+#form_index button{
+    width:20%;
+}
 
 /* VERSION TABLETTE */
 @media screen and (min-width:600px) and (max-width:1200px){

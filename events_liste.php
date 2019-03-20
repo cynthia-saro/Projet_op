@@ -1,5 +1,6 @@
 <?php
 $titre="Events";
+$description="";
 include_once("include/header.inc.php");
 include_once('classes/Mypdo.class.php');
 include_once('classes/evenementsManager.class.php');
