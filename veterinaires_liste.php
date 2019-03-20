@@ -1,43 +1,29 @@
 <?php
 $titre="Espace profil";
 require_once("include/header.inc.php");
+require_once('classes/Mypdo.class.php');
+$dbo=new Mypdo();
+$sql="SELECT * FROM veterinaires";
+$stmt=$dbo->prepare($sql);
+$stmt->execute();
+$veterinaires=$stmt->fetchAll();
 ?>
     <main>
         <h1> Les vétérinaires </h1>
         <div id="liste_veto">
-    
-        <ul class="coordonnee">
-            <li><p>Nom:</p><p class="donnee">RAJAO</p></li>
-            <li><p>Prénom:</p><p class="donnee">Laura</p></li>
-            <li><p>Lieu:</p><p class="donnee">Ste Luce sur Loire</p></li>
-            <li><p>Spécialité:</p><p class="donnee"> Vétérinaire félins/canins</p></li>
 
-            <button onclick="location.href='veterinaire_detail.php?id=1'">Contacter</button>
-        </ul>
-        <ul class="coordonnee">
-            <li><p>Nom:</p><p class="donnee">PAGE</p></li>
-            <li><p>Prénom:</p><p class="donnee">Donna</p></li>
-            <li><p>Lieu:</p><p class="donnee">Paris</p></li>
-            <li><p>Spécialité:</p><p class="donnee">Vétérinaire reptiliens</p></li>
+        <?php
+        foreach($veterinaires as $veterinaire){ ?>
+            <ul class="coordonnee">
+                <li><p>Vétérinaire :</p><p class="donnee"><?php echo $veterinaire->prenom.' '.strtoupper($veterinaire->nom);?></p></li>
+                <li><p>Ville :</p><p class="donnee"><?php echo $veterinaire->ville;?></p></li>
+                <li><p>Spécialité :</p><p class="donnee"><?php echo $veterinaire->specialite;?></p></li>
 
-            <button onclick="location.href='veterinaire_detail.php?id=2'">Contacter</button>
-        </ul>
-        <ul class="coordonnee">
-            <li><p>Nom:</p><p class="donnee">OMANDA</p></li>
-            <li><p>Prénom:</p><p class="donnee">Hugo</p></li>
-            <li><p>Lieu:</p><p class="donnee">Lille</p></li>
-            <li><p>Spécialité:</p><p class="donnee">Chirurgien équidés</p></li>
-
-            <button onclick="location.href='veterinaire_detail.php?id=3'">Contacter</button>
-        </ul>
-        <ul class="coordonnee">
-            <li><p>Nom:</p><p class="donnee">LE SAUX</p></li>
-            <li><p>Prénom:</p><p class="donnee">Arnaud</p></li>
-            <li><p>Lieu:</p><p class="donnee">Lyon</p></li>
-            <li><p>Spécialité:</p><p class="donnee">Vétérinaire rongeurs</p></li>
-
-            <button onclick="location.href='veterinaire_detail.php?id=4'">Contacter</button>
-        </ul>
+                <button onclick="location.href='veterinaire_detail.php?id=<?php echo $veterinaire->id;?>'">Contacter</button>
+            </ul>
+        <?php
+        }
+        ?>
         </div>
     </main>
 <?php

@@ -27,9 +27,27 @@
 .categories_animaux div,.animaux div{
     width:100%;
     text-align:center;
-    background-color:black;
+    background-color:#028090;
     color:white;
     font-weight: bold;
+    text-transform: uppercase;
+    padding:5px;
+}
+
+#image_detail_animal {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#image_detail_animal img{
+    object-fit: contain;
+    border:3px solid #028090;
+    border-radius:15px;
+}
+
+#description_detail_animal{
+    text-align:center;
+    margin-top:30px;
 }
 
 /* VERSION TABLETTE */

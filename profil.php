@@ -11,9 +11,10 @@ $utilisateur=$utilisateurManager->getUtilisateur($_GET['id']);
     <div id="bloc_profil_utilisateur">
         <div id="image_utilisateur_profil"><img src="images/utilisateurs/<?php echo $utilisateur->getId().'_'.$utilisateur->getImageProfil();?>"></div>
         <div id="informations_utilisateur">
-            <h1><?php echo strtoupper ($utilisateur->getLastName()).' '.$utilisateur->getFirstName();?></h1>
+            <h1 id="nom_prenom_profil"><?php echo strtoupper ($utilisateur->getLastName()).' '.$utilisateur->getFirstName();?></h1>
             <div id="liste_informations_utilisateur">
                 <div><i class="far fa-user"></i><span class="liste_info_user"><?php echo $utilisateur->getUsername();?></span></div>
+                <div><i class="far fa-clock"></i><span class="liste_info_user"><?php echo 'Membre depuis le '.utf8_encode(strftime('%A %d %B',strtotime($utilisateur->getDateCreated())));?></span></div>
             </div>
         </div>
     </div>
@@ -55,7 +56,7 @@ $utilisateur=$utilisateurManager->getUtilisateur($_GET['id']);
                     <?php echo $comment->content;?>
                 </div>
                 <div class="commentaire_date">
-                    <?php echo 'Message posté le '.utf8_encode(strftime('%A %d %B',strtotime($comment->dateCreated))).' par : '.$comment->first_name.' '.strtoupper($comment->last_name);?>
+                    <?php echo 'Message posté le '.utf8_encode(strftime('%A %d %B',strtotime($comment->dateCreated))).' par '.$comment->first_name.' '.strtoupper($comment->last_name);?>
                 </div>
                 <?php
                 //savoir si l'utilisateur aime déjà le poste

@@ -71,7 +71,7 @@ footer ul{
     padding:0;
     margin:0;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 footer ul li a{
@@ -109,7 +109,7 @@ footer ul li a:hover {
 
 button{
     display:block;
-    margin:30px auto;
+    margin:30px auto 15px auto;
     border:none;
     padding:10px;
     background-color:#dbff3d;
@@ -117,6 +117,11 @@ button{
     font-weight: bold;
     font-size:1.2em;
     border-radius:5px;
+}
+
+button:hover{
+    background-color:#028090;
+    color:#dbff3d;
 }
 
 button:hover,#logo_site:hover{
@@ -259,6 +264,24 @@ form{
     width:50%;
     margin:0 auto;
 }
+
+h2{
+    font-size:1.6em;
+}
+
+.bloc_commentaire_image{
+    width:30%;
+    margin-top:10px;
+}
+
+#espace_profil{
+    cursor:pointer;
+}
+
+.bloc_commentaire_imag img{
+    object-fit: cover;
+}
+
 
 /* VERSION TABLETTE */
 @media screen and (min-width:600px) and (max-width:1200px){

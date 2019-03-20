@@ -9,7 +9,7 @@ class animalPhotoManager
     }
 
     public function add($idAnimal,$photo){
-        $sql='INSERT INTO animal_photo(idAnimal,photo) VALUES (:idAnimal,:photo)';
+        $sql='INSERT INTO animal_photo(idAnimal,photo,date) VALUES (:idAnimal,:photo,NOW())';
         $requete=$this->db->prepare($sql);
         $requete->bindValue(':idAnimal',$idAnimal);
         $requete->bindValue(':photo',$photo);

@@ -65,12 +65,18 @@
 }
 
 #titre_liste_prochains_events{
-    background-color:#dbff3d;
+    background-color:#028090;
     border-radius:8px 8px 0 0;
     text-transform: uppercase;
     text-align:center;
     font-weight: bold;
     font-size:1.2em;
+    color:white;
+}
+
+#h2_event{
+    text-align:center;
+    color:white;
 }
 
 .liste_prochains_events{

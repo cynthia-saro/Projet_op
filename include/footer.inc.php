@@ -2,6 +2,7 @@
         <nav>
             <ul>
                 <li><a href="mentions_legales.php">Mentions Légales</a></li>
+                <li><a href="qui_sommes_nous.php">Qui sommes nous ?</a></li>
                 <li><a href="credits.php">Crédits</a></li>
             </ul>
         </nav>

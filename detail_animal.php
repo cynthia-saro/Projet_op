@@ -9,8 +9,10 @@ $animal=$animalManager->getAnimal($_GET['idAnimal']);
 ?>
     <main>
         <h1>Comment s'occuper d'un <?php echo $animal->getLibelle();?> ?</h1>
-        <img src="images/categories_animaux/<?php echo $animal->getImage();?>">
-        <p><?php echo $animal->getDescription();?></p>
+        <div id="image_detail_animal">
+            <img src="images/categories_animaux/<?php echo $animal->getImage();?>">
+        </div>
+        <p id="description_detail_animal"><?php echo $animal->getDescription();?></p>
     </main>
 <?php
 require_once("include/footer.inc.php");

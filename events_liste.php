@@ -22,7 +22,7 @@ $evenementsManager=new evenementsManager($dbo);
             </ul>
         <?php
         if(!empty($_SESSION['id'])){ ?>
-            <button onclick="location.href = 'event_add.php'">Ajouter événement</button>
+            <button onclick="location.href = 'event_add.php'">Ajouter un événement</button>
             <?php
         } ?>
         </div>

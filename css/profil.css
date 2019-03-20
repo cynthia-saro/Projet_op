@@ -9,10 +9,14 @@
 #bloc_profil_utilisateur{
     position:relative;
     display:flex;
-    border:2px solid green;
+    border:2px solid #028090;
     border-radius:10px;
     overflow:hidden;
-    background-color:whitesmoke;
+    background-color:white;
+}
+
+#nom_prenom_profil{
+    color:black;
 }
 
 #bloc_profil_utilisateur #image_utilisateur_profil{
@@ -60,11 +64,14 @@
 }
 
 .cadre_user{
-    width:15%;
+    width:20%;
+    cursor:pointer;
 }
 
 .cadre_nom_prenom{
-    background-color:#dbff3d;
+    background-color:#028090;
+    color:white;
+    font-weight: bold;
     text-align:center;
 }
 

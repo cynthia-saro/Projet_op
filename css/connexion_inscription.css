@@ -106,6 +106,8 @@ button{
 
 button:hover{
     cursor:pointer;
+    background-color:#028090;
+    color:#dbff3d;
 }
 
 #message_input_file{

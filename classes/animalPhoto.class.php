@@ -4,6 +4,7 @@ class animalPhoto
 {
     private $idAnimal;
     private $photo;
+    private $date;
 
     public function __construct($valeurs = array()){
         if (!empty($valeurs)) {
@@ -19,6 +20,9 @@ class animalPhoto
                     break;
                 case 'photo':
                     $this->setPhoto($valeur);
+                    break;
+                case 'date':
+                    $this->setDate($valeur);
                     break;
             }
         }
@@ -55,6 +59,23 @@ class animalPhoto
     {
         $this->photo = $photo;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param mixed $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+    }
+
 
 
 }

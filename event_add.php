@@ -104,7 +104,7 @@ if($_POST) {
                     <input type="file" name="picture" id="picture" accept=".jpg, .jpeg, .png" required>
                 </div>
 
-                <h2 class="h2">Adresse de l'événement</h2>
+                <h2 id="h2_event">Adresse de l'événement</h2>
 
                 <div class="form-group">
                     <label for="city">Ville</label>

@@ -9,6 +9,7 @@ class Utilisateur {
     private $email;
     private $password;
     private $image_profil;
+    private $date_created;
 
     public function __construct($valeurs = array()) {
         if (! empty($valeurs)) {
@@ -39,6 +40,9 @@ class Utilisateur {
                     break;
                 case 'image_profil':
                     $this->setImageProfil($valeur);
+                    break;
+                case 'date_created':
+                    $this->setDateCreated($valeur);
                     break;
             }
         }
@@ -101,5 +105,17 @@ class Utilisateur {
     {
         $this->image_profil = $image_profil;
     }
+
+    public function getDateCreated()
+    {
+        return $this->date_created;
+    }
+
+    public function setDateCreated($date_created)
+    {
+        $this->date_created = $date_created;
+    }
+
+
 }
 ?>
