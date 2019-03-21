@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 20 mars 2019 à 14:24
+-- Généré le :  jeu. 21 mars 2019 à 20:29
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -86,20 +86,30 @@ INSERT INTO `animals` (`id`, `idCategorie`, `libelle`, `description`, `image`) V
 
 DROP TABLE IF EXISTS `animal_photo`;
 CREATE TABLE IF NOT EXISTS `animal_photo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `idAnimal` int(11) NOT NULL,
   `photo` text NOT NULL,
-  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `animal_photo`
 --
 
-INSERT INTO `animal_photo` (`idAnimal`, `photo`, `date`) VALUES
-(5, 'rongeurs.jpg', '2019-03-19 23:36:28'),
-(6, 'canides.jpg', '2019-03-19 23:36:28'),
-(6, 'equides.jpg', '2019-03-19 23:36:28'),
-(6, 'equides.jpg\r\n', '2019-03-19 23:36:28');
+INSERT INTO `animal_photo` (`id`, `idAnimal`, `photo`, `date`) VALUES
+(1, 5, 'rongeurs.jpg', '2019-03-19 23:36:28'),
+(2, 6, 'canides.jpg', '2019-03-19 23:36:28'),
+(3, 6, 'equides.jpg', '2019-03-19 23:36:28'),
+(4, 6, 'equides.jpg\r\n', '2019-03-19 23:36:28'),
+(5, 5, 'dog-icon.png', '2019-03-20 16:03:05'),
+(6, 5, 'animals-dog.png', '2019-03-20 16:03:15'),
+(7, 5, 'animals-dog.png', '2019-03-20 16:04:05'),
+(8, 5, 'bda445a353cff250815f7ccedae8ab1d.png', '2019-03-20 16:04:05'),
+(9, 5, 'dog-icon.png', '2019-03-20 16:04:05'),
+(10, 5, 'tree-576847_960_720.png', '2019-03-20 16:04:05'),
+(11, 5, 'veterinaire-thetford_logo-patte.png', '2019-03-20 16:04:05'),
+(12, 6, 'mironos_2.png', '2019-03-20 16:04:39');
 
 -- --------------------------------------------------------
 
@@ -153,17 +163,40 @@ INSERT INTO `categories` (`id`, `libelle`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `comments`
+-- Structure de la table `comments_photo`
 --
 
-DROP TABLE IF EXISTS `comments`;
-CREATE TABLE IF NOT EXISTS `comments` (
+DROP TABLE IF EXISTS `comments_photo`;
+CREATE TABLE IF NOT EXISTS `comments_photo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `idAuthor` int(11) NOT NULL,
+  `idPhoto` int(11) NOT NULL,
+  `idUser` int(11) NOT NULL,
   `content` text NOT NULL,
-  `dateCreated` datetime DEFAULT CURRENT_TIMESTAMP,
+  `dateCreated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `comments_photo`
+--
+
+INSERT INTO `comments_photo` (`id`, `idPhoto`, `idUser`, `content`, `dateCreated`) VALUES
+(1, 1, 28, 'super', '2019-03-20 23:25:27'),
+(2, 1, 28, 'whoua', '2019-03-20 23:25:27'),
+(3, 1, 28, 'test', '2019-03-21 12:16:14'),
+(4, 1, 28, 'tetet', '2019-03-21 12:17:26'),
+(5, 1, 28, 'ttrtrt', '2019-03-21 12:18:34'),
+(6, 1, 28, 'erer', '2019-03-21 12:20:01'),
+(7, 5, 28, 'fdf', '2019-03-21 12:20:48'),
+(8, 1, 28, 'fdf', '2019-03-21 12:21:01'),
+(9, 1, 28, 'ffff', '2019-03-21 12:21:58'),
+(10, 1, 28, 'gfg', '2019-03-21 12:22:21'),
+(11, 5, 28, 'fdf', '2019-03-21 12:22:40'),
+(12, 5, 28, 'ffff', '2019-03-21 12:22:42'),
+(13, 1, 28, 'fdfdfdfdfd', '2019-03-21 12:23:10'),
+(14, 1, 28, 'bonjour van', '2019-03-21 12:23:17'),
+(15, 1, 28, 'tu pues', '2019-03-21 12:23:20'),
+(16, 1, 28, 'tg logan :)\nhiij', '2019-03-21 12:23:36');
 
 -- --------------------------------------------------------
 
@@ -189,14 +222,17 @@ CREATE TABLE IF NOT EXISTS `events` (
   `picture` varchar(50) NOT NULL,
   `is_published` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `events`
 --
 
 INSERT INTO `events` (`id`, `id_user`, `name`, `date_start`, `hour_start`, `date_end`, `hour_end`, `zip_code`, `name_city`, `street_address`, `description`, `limited_number_participant`, `date_created`, `picture`, `is_published`) VALUES
-(1, 28, 'Anniv logoon', '2019-08-20', '20:00:00', '2019-08-20', '23:30:00', '44200', 'Nantes', '8, rue konrad adenauer', 'Anniv de Logoon\r\n\r\nPS : Je veux une switch', 20, '2019-02-04 23:39:22', 'hqdefault.jpg', 1);
+(1, 28, 'Anniv logoon', '2019-08-20', '20:00:00', '2019-08-20', '23:30:00', '44200', 'Nantes', '8, rue konrad adenauer', 'Anniv de Logoon\r\n\r\nPS : Je veux une switch', 20, '2019-02-04 23:39:22', 'hqdefault.jpg', 1),
+(2, 28, 'Cache-cache des os de vos anciens animaux', '2019-08-20', '20:00:00', '2019-08-20', '23:30:00', '44200', 'Nantes', '8, rue konrad adenauer', 'Anniv de Logoon\r\n\r\nPS : Je veux une switch', 20, '2019-02-04 23:39:22', 'hqdefault.jpg', 1),
+(3, 28, 'Boom dans le parc', '2019-08-20', '20:00:00', '2019-08-20', '23:30:00', '44200', 'Nantes', '8, rue konrad adenauer', 'Anniv de Logoon\r\n\r\nPS : Je veux une switch', 20, '2019-02-04 23:39:22', 'hqdefault.jpg', 1),
+(4, 28, 'Chassons les oiseaux', '2019-08-20', '20:00:00', '2019-08-20', '23:30:00', '44200', 'Nantes', '8, rue konrad adenauer', 'Anniv de Logoon\r\n\r\nPS : Je veux une switch', 20, '2019-02-04 23:39:22', 'hqdefault.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -368,7 +404,28 @@ CREATE TABLE IF NOT EXISTS `user_aime_comments` (
 INSERT INTO `user_aime_comments` (`idUser`, `idComment`) VALUES
 (28, 2),
 (28, 6),
-(28, 7);
+(28, 7),
+(28, 11),
+(28, 10);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user_aime_photo`
+--
+
+DROP TABLE IF EXISTS `user_aime_photo`;
+CREATE TABLE IF NOT EXISTS `user_aime_photo` (
+  `idPhoto` int(11) NOT NULL,
+  `idUser` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `user_aime_photo`
+--
+
+INSERT INTO `user_aime_photo` (`idPhoto`, `idUser`) VALUES
+(1, 28);
 
 -- --------------------------------------------------------
 
@@ -384,7 +441,7 @@ CREATE TABLE IF NOT EXISTS `user_comments` (
   `content` text NOT NULL,
   `dateCreated` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `user_comments`
@@ -398,7 +455,10 @@ INSERT INTO `user_comments` (`id`, `idUserAuthor`, `idUserReceiver`, `content`, 
 (6, 28, 28, 'tu pues van, go kfc', '2019-03-19 12:57:48'),
 (7, 28, 28, 'Van est une pizda hihihi', '2019-03-19 14:26:49'),
 (8, 28, 28, 'test', '2019-03-19 23:38:01'),
-(9, 28, 29, 'test2', '2019-03-19 23:38:09');
+(9, 28, 29, 'test2', '2019-03-19 23:38:09'),
+(10, 28, 28, 'van t konn', '2019-03-20 15:37:44'),
+(11, 28, 28, 'van tu pues', '2019-03-20 15:39:11'),
+(12, 28, 28, 'test', '2019-03-20 16:06:10');
 
 -- --------------------------------------------------------
 

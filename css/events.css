@@ -62,6 +62,11 @@
 #prochains_events li{
     list-style: none;
     padding:10px;
+    border-bottom:1px solid #028090;
+}
+
+#prochains_events li:not(#titre_liste_prochains_events):hover{
+    background-color:lightcyan;
 }
 
 #titre_liste_prochains_events{

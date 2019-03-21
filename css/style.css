@@ -10,9 +10,12 @@ main {
 
 h1{
     text-align:center;
+    margin-top:15px;
 }
 
-body{background-color:lightseagreen}
+body{
+    background-color:lightseagreen;
+}
 
 #nav_principal{
     background-color:#028090 !important;
@@ -50,6 +53,14 @@ img{
 #logo_site{
     max-height:8%;
     max-width:8%;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    z-index:999;
+    display:block;
+    top:0;
 }
 
 #bloc_header{
@@ -170,14 +181,14 @@ form{
     margin:0 auto;
 }
 
-.cadre_like{
+.cadre_like,.cadre_like_photo_animal{
     display:flex;
     width:150px;
     margin-top:10px;
     border-radius:25px;
 }
 
-.cadre_like:hover{
+.cadre_like:hover,.cadre_like_photo_animal:hover{
     cursor:pointer;
     background-color:lightgreen;
 }
@@ -190,7 +201,7 @@ form{
     object-fit: cover;
 }
 
-.like{
+.like,.like_photo_animal{
     margin:auto;
 }
 
@@ -298,6 +309,8 @@ h2{
 
 .index_droite{
     width:30%;
+    position:fixed;
+    right:5%;
 }
 
 #form_index{
@@ -313,10 +326,52 @@ h2{
 
 #form_index textarea{
     width:100%;
+    min-height:100px;
 }
 
 #form_index button{
     width:20%;
+    max-height:min-content;
+}
+
+.animal_photos_liste{
+    margin:40px 0;
+}
+
+#mentions_legales_cadre,#description_qui_sommes_nous,#credits{
+    background-color:white;
+    padding:15px;
+    border-radius:15px;
+    border:3px solid #028090;
+}
+
+#credits{
+    width:45%;
+    margin:0 auto;
+}
+
+main{
+    margin-top:11%;
+}
+/*
+.cadre_like_photos_animal{
+    width:50px;
+    position:absolute;
+    top:5px;
+    right:5px;
+}
+
+.empty_heart{
+    object-fit:cover;
+}
+
+.animal_photos_liste{
+    position:relative;
+}*/
+
+#form_index{
+    background-color:lightcyan;
+    padding:5px;
 }
 
 /* VERSION TABLETTE */

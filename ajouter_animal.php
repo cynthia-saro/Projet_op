@@ -9,7 +9,6 @@ if($_POST){
     $nom=$_POST['nom_animal'];
     $description=$_POST['description_animal'];
     $animalProprietaireManager->add($_SESSION['id'],$nom,$description);
-
     $idAnimal=$dbo->lastInsertId();
 
     $animalPhotoManager=new animalPhotoManager($dbo);

@@ -18,7 +18,7 @@ $dbo=new Mypdo();
         $user = $stmt -> fetch();
         ?>
         <div onclick="location.href = 'profil.php?id=<?php echo $_SESSION['id'];?>'" id="espace_profil">
-            <div id="photo_profil">
+            <div id="photo_profil" data-id="<?php echo $_SESSION['id'];?>">
                 <?php echo '<img src="images/utilisateurs/'.$user->image_profil.'">';?>
             </div>
             <div id="nom_prenom">

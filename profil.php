@@ -104,7 +104,7 @@ $utilisateur=$utilisateurManager->getUtilisateur($_GET['id']);
       JOIN animal_proprietaire a2
       ON a1.idAnimal=a2.id
       WHERE idProprietaire=:id
-      GROUP BY id";
+      GROUP BY a2.id";
         $stmt = $dbo->prepare($sql);
         $stmt->bindValue(":id",$_GET['id']);
         $stmt->execute();

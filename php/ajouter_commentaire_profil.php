@@ -17,4 +17,8 @@ $stmt->bindValue(':idUserAuthor',$_SESSION['id']);
 $stmt->bindValue(':idUserReceiver',$id_profil);
 $stmt->bindValue(':content',$commentaire);
 $stmt->execute();
+if(!empty($_GET['page'])){
+    header('Location:../');
+    exit();
+}
 header('Location:../profil.php?id='.$id_profil);

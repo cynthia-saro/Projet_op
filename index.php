@@ -6,27 +6,17 @@ include_once('classes/evenementsManager.class.php');
 $evenementsManager=new evenementsManager($dbo);
 ?>
 <main>
-    <div>
-        KEKONPEUTMETTREICI?
-    </div>
     <div id="flux_index">
         <div id="index_gauche">
             <?php //ajouter un commentaire ?>
-            <form id="form_index" action="php/ajouter_commentaire_flux.php" method="post">
+            <form id="form_index" action="php/ajouter_commentaire_profil.php?idProfil=<?php echo $_SESSION['id'];?>&page='index'" method="post">
                 <div id="textarea_index">
                     <textarea id="textarea_profil" name="commentaire" placeholder="Ecrire un commentaire ..." required></textarea>
                 </div>
                 <button id="button_index" type="submit">Envoyer</button>
             </form>
-
-        <?php //Liste des commentaires récents ?>
         <?php
-        $sql="SELECT uc.id,idUserAuthor,content,dateCreated,last_name,first_name,image_profil
-                FROM users u
-                INNER JOIN user_comments uc
-                ON u.id=uc.idUserAuthor
-                ORDER BY dateCreated DESC
-                LIMIT 30";
+        //Liste des commentaires récents
         $sql="(SELECT uc.id,idUserAuthor,content,last_name,first_name,image_profil,'' as idAnimal,'' as nomAnimal,'' as photo,dateCreated
                 FROM users u
                 INNER JOIN user_comments uc
@@ -34,7 +24,7 @@ $evenementsManager=new evenementsManager($dbo);
                 
                 UNION ALL
                 
-                (SELECT '','','','','','',id,nom,photo,date as dateCreated FROM animal_proprietaire ap 
+                (SELECT '','','','','','',ap.id,nom,photo,date as dateCreated FROM animal_proprietaire ap 
                 JOIN animal_photo ap2
                 ON ap.id=ap2.idAnimal)
                 ORDER BY dateCreated DESC";
@@ -45,7 +35,7 @@ $evenementsManager=new evenementsManager($dbo);
             <?php
             //PHOTO
             if(!empty($comment->idAnimal)){ ?>
-                <div class="bloc_commentaire_image">
+                <div class="bloc_commentaire_profil">
                     <img src="images/animaux/<?php echo $comment->idAnimal.'_'.$comment->photo;?>">
                 </div>
             <?php

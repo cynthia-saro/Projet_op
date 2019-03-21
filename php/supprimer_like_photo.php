@@ -8,11 +8,11 @@ require_once("../include/config.inc.php");
 require_once("../include/autoLoad.inc.php");
 include_once('../classes/Mypdo.class.php');
 $dbo =new Mypdo();
-$commentaire=$_POST['commentaire'];
+$id_photo=$_POST['idPhoto'];
 
-$sql="INSERT INTO comments(idUserAuthor,content,dateCreated) VALUES(:idUserAuthor,:content,NOW())";
+$sql="DELETE FROM user_aime_photo 
+WHERE idPhoto=:idPhoto AND idUser=:idUser";
 $stmt=$dbo->prepare($sql);
-$stmt->bindValue(':idUserAuthor',$_SESSION['id']);
-$stmt->bindValue(':content',$commentaire);
+$stmt->bindValue(':idPhoto',$id_photo);
+$stmt->bindValue(':idUser',$_SESSION['id']);
 $stmt->execute();
-header('Location:../index.php');
