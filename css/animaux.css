@@ -50,6 +50,10 @@
     margin-top:30px;
 }
 
+.categories_animaux img{
+    object-fit: contain;
+}
+
 /* VERSION TABLETTE */
 @media screen and (min-width:600px) and (max-width:949px){
     .categories_animaux,.animaux{

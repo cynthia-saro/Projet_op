@@ -8,7 +8,7 @@ $animalManager=new animalManager($pdo);
 $animal=$animalManager->getAnimal($_GET['idAnimal']);
 ?>
     <main>
-        <h1>Comment s'occuper d'un <?php echo $animal->getLibelle();?> ?</h1>
+        <h1><?php echo $animal->getLibelle();?></h1>
         <div id="image_detail_animal">
             <img src="images/categories_animaux/<?php echo $animal->getImage();?>">
         </div>

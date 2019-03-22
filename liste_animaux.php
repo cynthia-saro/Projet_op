@@ -10,7 +10,7 @@ $categorieManager=new categorieManager($pdo);
 $categorie=$categorieManager->getNomCategorieAnimauxById($_GET['idCategorie']);
 ?>
     <main>
-        <h1>Liste des <?php echo $categorie->getLibelle() ;?></h1>
+        <h1>Guide sur les <?php echo $categorie->getLibelle() ;?></h1>
         <div id="liste_animaux">
             <?php
             foreach($animaux as $animal) {

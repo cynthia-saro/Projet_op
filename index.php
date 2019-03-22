@@ -17,14 +17,14 @@ $evenementsManager=new evenementsManager($dbo);
             </form>
         <?php
         //Liste des commentaires récents
-        $sql="(SELECT uc.id,idUserAuthor,content,last_name,first_name,image_profil,'' as idAnimal,'' as nomAnimal,'' as photo,dateCreated
+        $sql="(SELECT uc.id,idUserAuthor,content,last_name,first_name,image_profil,'' as idAnimal,'' as idPhoto,'' as nomAnimal,'' as photo,dateCreated
                 FROM users u
                 INNER JOIN user_comments uc
                 ON u.id=uc.idUserAuthor)
                 
                 UNION ALL
                 
-                (SELECT '','','','','','',ap.id,nom,photo,date as dateCreated FROM animal_proprietaire ap 
+                (SELECT '','','','','','',ap.id,ap2.id as idPhoto,nom,photo,date as dateCreated FROM animal_proprietaire ap 
                 JOIN animal_photo ap2
                 ON ap.id=ap2.idAnimal)
                 ORDER BY dateCreated DESC";
@@ -35,8 +35,36 @@ $evenementsManager=new evenementsManager($dbo);
             <?php
             //PHOTO
             if(!empty($comment->idAnimal)){ ?>
-                <div class="bloc_commentaire_profil">
-                    <img src="images/animaux/<?php echo $comment->idAnimal.'_'.$comment->photo;?>">
+                <?php
+                $sql="SELECT COUNT(*) as nb_likes
+                FROM user_aime_photo
+                WHERE idPhoto=:id";
+                $stmt=$dbo->prepare($sql);
+                $stmt->bindValue(':id',$comment->idPhoto);
+                $stmt->execute();
+                $likes=$stmt->fetch();
+
+                $sql="SELECT idPhoto
+                FROM user_aime_photo
+                WHERE idUser=:idUser
+                AND idPhoto=:idPhoto";
+                $stmt=$dbo->prepare($sql);
+                $stmt->bindValue(':idUser',$_SESSION['id']);
+                $stmt->bindValue(':idPhoto',$comment->idPhoto);
+                $stmt->execute();
+                $like=$stmt->fetch();
+                if(empty($like)){
+                    $like=false;
+                }else{
+                    $like=true;
+                }
+                ?>
+                <div class="bloc_commentaire_profil photo_accueil">
+                    <div class="image_index"><img src="images/animaux/<?php echo $comment->idAnimal.'_'.$comment->photo;?>"></div>
+                    <div id="cadre_page_detail" data-total-like="<?php echo $likes->nb_likes;?>" data-like="<?php if($like===true){echo 'true';}else{echo 'false';};?>" class="cadre_like_photo_animal <?php if($like===true){echo 'cadre_liked';};?>">
+                        <div id="form_detail_animal" data-id-photo="<?php echo $comment->idPhoto;?>" class="icon_like"><img src="images/like_icon.png"></div>
+                        <div class="like_photo_animal">J'aime (<?php echo $likes->nb_likes;?>)</div>
+                    </div>
                 </div>
             <?php
             }else {

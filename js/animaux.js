@@ -272,6 +272,9 @@ $('body').on('click','.cadre_like_photo_animal',function(){
                 );
                 let cadre_page_detail=$('#cadre_page_detail');
                 cadre_page_detail.css('margin','15px auto 0 auto');
+
+                let photo_accueil=$('.photo_accueil .cadre_like_photo_animal');
+                photo_accueil.css('margin','15px 0 0 0');
             },
             error:function(data){
             }
@@ -294,6 +297,9 @@ $('body').on('click','.cadre_like_photo_animal',function(){
                 );
                 let cadre_page_detail=$('#cadre_page_detail');
                 cadre_page_detail.css('margin','15px auto 0 auto');
+
+                let photo_accueil=$('.photo_accueil .cadre_like_photo_animal');
+                photo_accueil.css('margin','15px 0 0 0');
             },
             error:function(data){
             }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 21 mars 2019 à 20:29
+-- Généré le :  ven. 22 mars 2019 à 20:20
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `animals` (
   `description` text NOT NULL,
   `image` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=104 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=106 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `animals`
@@ -76,7 +76,9 @@ INSERT INTO `animals` (`id`, `idCategorie`, `libelle`, `description`, `image`) V
 (8, 2, 'Âne', 'âne', 'ane.jpg'),
 (9, 5, 'Tortue', 'tortue', 'tortue.jpg'),
 (10, 5, 'Caméléon', 'cameleon', 'cameleon.jpg'),
-(11, 5, 'Serpent', 'serpent', 'serpent.jpg');
+(11, 5, 'Serpent', 'serpent', 'serpent.jpg'),
+(105, 1, 'Quelles brosses choisir pour son chien ?', 'aaa', 'aaa'),
+(104, 1, 'Pourquoi couper les griffes de son chien ?', 'PARCE QUE', 'no_image_rip.png');
 
 -- --------------------------------------------------------
 
@@ -146,19 +148,20 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `libelle` varchar(200) NOT NULL,
   `image` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `categories`
 --
 
 INSERT INTO `categories` (`id`, `libelle`, `image`) VALUES
-(1, 'Canidés', 'canides.jpg'),
-(2, 'Équidés', 'equides.jpg'),
-(3, 'Félins', 'felins.jpg'),
-(4, 'Léporidés', 'leporides.jpg'),
-(5, 'Reptiles', 'reptiles.jpg'),
-(6, 'Rongeurs', 'rongeurs.jpg');
+(1, 'Chiens', 'canides.jpg'),
+(2, 'Chevaux', 'equides.jpg'),
+(3, 'Chats', 'felins.jpg'),
+(4, 'Lapins', 'leporides.jpg'),
+(5, 'Poissons', 'poissons.jpg'),
+(6, 'Hamsters', 'rongeurs.jpg'),
+(14, 'Rats', 'rat.jpg');
 
 -- --------------------------------------------------------
 
@@ -406,7 +409,8 @@ INSERT INTO `user_aime_comments` (`idUser`, `idComment`) VALUES
 (28, 6),
 (28, 7),
 (28, 11),
-(28, 10);
+(28, 10),
+(28, 12);
 
 -- --------------------------------------------------------
 
@@ -425,7 +429,8 @@ CREATE TABLE IF NOT EXISTS `user_aime_photo` (
 --
 
 INSERT INTO `user_aime_photo` (`idPhoto`, `idUser`) VALUES
-(1, 28);
+(1, 28),
+(12, 28);
 
 -- --------------------------------------------------------
 

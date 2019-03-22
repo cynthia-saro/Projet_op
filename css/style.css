@@ -350,6 +350,10 @@ h2{
     margin:0 auto;
 }
 
+.photo_accueil .cadre_like_photo_animal{
+    margin:15px 0 0 0;
+}
+
 main{
     margin-top:11%;
 }
