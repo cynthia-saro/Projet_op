@@ -64,8 +64,9 @@
 }
 
 .cadre_user{
-    width:20%;
+    width:22%;
     cursor:pointer;
+    margin-bottom:10px;
 }
 
 .cadre_nom_prenom{

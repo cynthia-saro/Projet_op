@@ -3,9 +3,53 @@
   <component name="ChangeListManager">
     <list default="true" id="22d4cb31-e1e1-492c-a7f5-54ac1f6228af" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/header.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/header.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qui_sommes_nous.php" beforeDir="false" afterPath="$PROJECT_DIR$/qui_sommes_nous.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/connexion_inscription.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/connexion_inscription.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/profil.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/profil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/10_lm7ybw88kia21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/11_hgyf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/12_book-botanical-cactus-403571.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/13_IMG_20181220_214536.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/13_lir8audqur021.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/28_rongeurs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/3_rongeurs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/4_rongeurs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/5_animals-dog - Copie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/5_animals-dog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/5_bda445a353cff250815f7ccedae8ab1d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/5_dog-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/5_rongeurs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/5_tree-576847_960_720.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/5_veterinaire-thetford_logo-patte.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/6_canides.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/6_equides.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/6_mironos_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/7_mc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/8_mc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/animaux/9_book-botanical-cactus-403571.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/categories_animaux/rat.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/categories_animaux/rat.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/empty_heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/events/19_image_defaut_utilisateur_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/events/1_hqdefault.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/utilisateurs/0_49673947_843988115771677_4773126224107012096_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/utilisateurs/28_image_defaut_utilisateur_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/utilisateurs/29_49900340_222098605402007_5838382103263182848_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/utilisateurs/29_hqdefault.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/utilisateurs/29_image_defaut_utilisateur_02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/utilisateurs/30_49673947_843988115771677_4773126224107012096_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/utilisateurs/30_chi_licking_by_miri_chiwa-d5seg3h.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/utilisateurs/31_49673947_843988115771677_4773126224107012096_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/utilisateurs/32_49900340_222098605402007_5838382103263182848_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/utilisateurs/image_defaut_utilisateur_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/utilisateurs/image_defaut_utilisateur_02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/utilisateurs/image_defaut_utilisateur_03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/veterinaires/balle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/veterinaires/balle2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/veterinaires/balle3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/veterinaires/balles.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/veterinaires/mangeur_balle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/veterinaires/ping.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/all_events_published.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/all_events_published.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +111,7 @@
     <session id="289456610">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="32" />
+          <entry key="project.closed" value="33" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="3" />
@@ -83,7 +127,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="99" />
+          <entry key="css" value="101" />
           <entry key="jpg" value="3" />
           <entry key="js" value="16" />
           <entry key="json" value="11" />
@@ -93,7 +137,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="99" />
+          <entry key="CSS" value="101" />
           <entry key="Image" value="3" />
           <entry key="JSON" value="11" />
           <entry key="JavaScript" value="16" />
@@ -103,14 +147,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="14154" />
+          <entry key="css" value="14184" />
           <entry key="js" value="7313" />
           <entry key="php" value="21323" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="14154" />
+          <entry key="CSS" value="14184" />
           <entry key="HTML" value="12" />
           <entry key="JavaScript" value="7307" />
           <entry key="PHP" value="21245" />
@@ -153,11 +197,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="489">
               <caret line="426" column="16" selection-start-line="426" selection-start-column="16" selection-end-line="426" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/profil.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/connexion_inscription.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="670">
+              <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -225,10 +287,8 @@
         <option value="$PROJECT_DIR$/inscription.php" />
         <option value="$PROJECT_DIR$/categories.php" />
         <option value="$PROJECT_DIR$/users_liste.php" />
-        <option value="$PROJECT_DIR$/css/connexion_inscription.css" />
         <option value="$PROJECT_DIR$/veterinaires_liste.php" />
         <option value="$PROJECT_DIR$/classes/UtilisateurManager.class.php" />
-        <option value="$PROJECT_DIR$/css/profil.css" />
         <option value="$PROJECT_DIR$/classes/Utilisateur.class.php" />
         <option value="$PROJECT_DIR$/classes/animalPhoto.class.php" />
         <option value="$PROJECT_DIR$/classes/animalPhotoManager.class.php" />
@@ -260,6 +320,8 @@
         <option value="$PROJECT_DIR$/include/header.inc.php" />
         <option value="$PROJECT_DIR$/qui_sommes_nous.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/css/profil.css" />
+        <option value="$PROJECT_DIR$/css/connexion_inscription.css" />
       </list>
     </option>
   </component>
@@ -276,7 +338,7 @@
       <path value="$PROJECT_DIR$/node_modules/moment/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -413,16 +475,15 @@
       <workItem from="1553301530120" duration="2573000" />
       <workItem from="1553304191341" duration="324000" />
       <workItem from="1553332121135" duration="1230000" />
-      <workItem from="1553357151184" duration="1347000" />
+      <workItem from="1553357151184" duration="3066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159992000" />
+    <option name="totallyTimeSpent" value="161711000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17750533" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -495,13 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/connexion_inscription.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="109" column="18" lean-forward="true" selection-start-line="109" selection-start-column="18" selection-end-line="109" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forum_topics.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -533,13 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1030">
           <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/profil.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -788,6 +835,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
           <caret line="426" column="16" selection-start-line="426" selection-start-column="16" selection-end-line="426" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/profil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/connexion_inscription.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
         </state>
       </provider>
     </entry>
