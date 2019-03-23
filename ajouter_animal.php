@@ -32,7 +32,8 @@ if($_POST){
                 <textarea id="description_animal" name="description_animal" required></textarea>
             </div>
             <div>
-                <input type="file" name="photos_animal[]" multiple="multiple" required>
+                <input type="file" name="photos_animal[]" multiple="multiple" required id="gallery-photo-add">
+                <div class="gallery"></div>
             </div>
             <button type="submit">Ajouter</button>
         </form>

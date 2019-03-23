@@ -94,7 +94,7 @@ $('body').on('click','.image_animal_post',function(){
                     let structure_image_detail='<div id="structure_image_detail">' +
                         '<div id="cadre_bloc_haut">'+
                         '<div id="cadre_image_animal"><img src="images/animaux/'+id_animal+'_'+detail_animal[0]['photo']+'"></div>'+
-                        '<div id="cadre_page_detail" data-like="'+detail_animal[0]['like']+'" data-total-like="'+detail_animal[0]['nb_likes']+'" class="cadre_like_photo_animal">'+
+                        '<div id="cadre_page_detail" data-id-photo="'+id_photo+'" data-like="'+detail_animal[0]['like']+'" data-total-like="'+detail_animal[0]['nb_likes']+'" class="cadre_like_photo_animal">'+
                         '<div class="icon_like"><img src="images/like_icon.png"></div>'+
                         '<div class="like_photo_animal">J\'aime ('+detail_animal[0]['nb_likes']+')</div>'+
                         '</div>'+
@@ -250,7 +250,7 @@ $("body").on('click',"#structure_image_detail",function(event) {
 
 $('body').on('click','.cadre_like_photo_animal',function(){
     let _this=$(this);
-    let id_photo=$("#form_detail_animal").attr('data-id-photo');
+    let id_photo=$(this).attr('data-id-photo');
     let user_like=$(this).attr('data-like');
     let total_like=$(this).attr('data-total-like');
     total_like=parseInt(total_like);
@@ -265,7 +265,7 @@ $('body').on('click','.cadre_like_photo_animal',function(){
             },
             success: function (data) {
                 _this.replaceWith(
-                    '<div id="cadre_page_detail" data-total-like="'+total_like+'" data-like="false" class="cadre_like_photo_animal">'+
+                    '<div id="cadre_page_detail" data-total-like="'+total_like+'" data-id-photo="'+id_photo+'" data-like="false" class="cadre_like_photo_animal">'+
                     '<div class="icon_like"><img src="images/like_icon.png"></div>'+
                     '<div class="like_photo_animal">J\'aime ('+total_like+')</div>'+
                     '</div>'
@@ -290,7 +290,7 @@ $('body').on('click','.cadre_like_photo_animal',function(){
             },
             success: function (data) {
                 _this.replaceWith(
-                    '<div id="cadre_page_detail" data-total-like="'+total_like+'" data-like="true" class="cadre_like_photo_animal cadre_liked">'+
+                    '<div id="cadre_page_detail" data-total-like="'+total_like+'" data-id-photo="'+id_photo+'" data-like="true" class="cadre_like_photo_animal cadre_liked">'+
                     '<div class="icon_like"><img src="images/like_icon.png"></div>'+
                     '<div class="like_photo_animal">J\'aime ('+total_like+')</div>'+
                     '</div>'
@@ -305,4 +305,29 @@ $('body').on('click','.cadre_like_photo_animal',function(){
             }
         });
     }
+});
+
+// Multiple images preview in browser
+var imagesPreview = function(input, placeToInsertImagePreview) {
+
+    if (input.files) {
+        $('.gallery').html('');
+        var filesAmount = input.files.length;
+
+        for (i = 0; i < filesAmount; i++) {
+            var reader = new FileReader();
+
+            reader.onload = function(event) {
+                $('.gallery').append('<div></div>');
+                $($.parseHTML('<img class="image_preview">')).attr('src', event.target.result).appendTo($('.gallery div:last-child'));
+            }
+
+            reader.readAsDataURL(input.files[i]);
+        }
+    }
+
+};
+
+$('#gallery-photo-add').on('change', function() {
+    imagesPreview(this, 'div.gallery');
 });

@@ -60,27 +60,30 @@ $commentaires=$stmt->fetchAll();
     <main class="container" id="page_detail_event">
         <h1 class="text_center">Détail de l'événement "<?php echo $detail_evenement->name;?>"</h1>
         <h2 class="text_center">Organisé par <?php echo $createur_evenement->last_name.' '.$createur_evenement->first_name;?></h2>
-        <img class="bloc_center" src="images/events/<?php echo $_GET['id'].'_'.$detail_evenement->picture;?>">
         <div id="bloc_detail_evenement">
-
-            <div id="description_event">
-                <p class="card-body">Rendez-vous à <?php echo $detail_evenement->name_city.', '.$detail_evenement->zip_code.', '.$detail_evenement->street_address.' le '.utf8_encode(strftime('%A %d %B',strtotime($detail_evenement->date_start))).' à '.$detail_evenement->hour_start.' jusqu\'au '.utf8_encode(strftime('%A %d %B',strtotime($detail_evenement->date_end))).', '.$detail_evenement->hour_end.' !';?></p>
-                <p class="card-body"><?php echo $detail_evenement->description;?></p>
+            <div id="bloc_image_description">
+                <div id="description_event">
+                    <p class="card-body"><?php echo $detail_evenement->description;?></p>
+                    <p class="card-body">Rendez-vous à <?php echo $detail_evenement->name_city.', '.$detail_evenement->zip_code.', '.$detail_evenement->street_address.' le '.utf8_encode(strftime('%A %d %B',strtotime($detail_evenement->date_start))).' à '.$detail_evenement->hour_start.' jusqu\'au '.utf8_encode(strftime('%A %d %B',strtotime($detail_evenement->date_end))).', '.$detail_evenement->hour_end.' !';?></p>
+                </div>
+                <div id="image_event">
+                    <img class="bloc_center" src="images/events/<?php echo $_GET['id'].'_'.$detail_evenement->picture;?>">
+                </div>
             </div>
 
-            <div>
+            <div id="buttons_event">
                 <?php
                 if(!empty($_SESSION['id'])){
                     //S'il n'est pas un participant, il a accès au bouton participer, sinon il peut annuler sa participation
                     if($est_participant===0){
                         //Vérification que le nombre de participants n'a pas atteint sa limite
                         if($nombre_participants!==$detail_evenement->limited_number_participant){ ?>
-                            <button class="btn btn-outline-dark" onclick="location.href='php/ajouter_participation_evenement.php?id_event=<?php echo $_GET['id'];?>'">Participer</button><br>
+                            <button onclick="location.href='php/ajouter_participation_evenement.php?id_event=<?php echo $_GET['id'];?>'">Participer</button>
                         <?php }else{ ?>
                             <div>Limite de participants atteinte !</div>
                         <?php }
                     }else{ ?>
-                        <button onclick="location.href='php/annuler_participation_evenement.php?id_event=<?php echo $_GET['id'];?>'">Annuler participation</button><br>
+                        <button onclick="location.href='php/annuler_participation_evenement.php?id_event=<?php echo $_GET['id'];?>'">Annuler participation</button>
                     <?php }
                 }else{
                     echo '<div>Vous devez être connectés pour pouvoir participer à l\'événement !</div>';
@@ -101,6 +104,11 @@ $commentaires=$stmt->fetchAll();
                 <thead>
                 <tr>
                     <td colspan="3">Liste des participants</td>
+                </tr>
+                <tr>
+                    <td>Nom</td>
+                    <td>Prénom</td>
+                    <td>Profil</td>
                 </tr>
                 </thead>
                 <tbody>

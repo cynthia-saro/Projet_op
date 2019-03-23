@@ -25,6 +25,9 @@ $dbo=new Mypdo();
                 <?php echo $user->first_name.' '.strtoupper($user->last_name);?>
             </div>
         </div>
+        <div id="image_header">
+            <img src="images/header2.png">
+        </div>
     </div>
     <nav id="nav_principal">
         <ul>

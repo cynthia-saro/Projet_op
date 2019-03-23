@@ -19,7 +19,8 @@ if($_FILES){
         <h1>Ajouter une photo de votre animal</h1>
         <form action="ajouter_photo_animal.php?id=<?php echo $_GET['id'];?>" method="post" enctype="multipart/form-data">
             <div>
-                <input type="file" name="photos_animal[]" multiple="multiple" required>
+                <input type="file" name="photos_animal[]" multiple="multiple" required id="gallery-photo-add">
+                <div class="gallery"></div>
             </div>
             <button type="submit">Ajouter</button>
         </form>

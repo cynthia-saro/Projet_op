@@ -61,7 +61,7 @@ $evenementsManager=new evenementsManager($dbo);
                 ?>
                 <div class="bloc_commentaire_profil photo_accueil">
                     <div class="image_index"><img src="images/animaux/<?php echo $comment->idAnimal.'_'.$comment->photo;?>"></div>
-                    <div id="cadre_page_detail" data-total-like="<?php echo $likes->nb_likes;?>" data-like="<?php if($like===true){echo 'true';}else{echo 'false';};?>" class="cadre_like_photo_animal <?php if($like===true){echo 'cadre_liked';};?>">
+                    <div data-id-photo="<?php echo $comment->idPhoto;?>" id="cadre_page_detail" data-total-like="<?php echo $likes->nb_likes;?>" data-like="<?php if($like===true){echo 'true';}else{echo 'false';};?>" class="cadre_like_photo_animal <?php if($like===true){echo 'cadre_liked';};?>">
                         <div id="form_detail_animal" data-id-photo="<?php echo $comment->idPhoto;?>" class="icon_like"><img src="images/like_icon.png"></div>
                         <div class="like_photo_animal">J'aime (<?php echo $likes->nb_likes;?>)</div>
                     </div>
@@ -127,7 +127,7 @@ $evenementsManager=new evenementsManager($dbo);
                 <?php
                 $events=$evenementsManager->getFutureEvents();
                 foreach($events as $event){ ?>
-                    <li class="liste_prochains_events"><a href="event_detail.php?id=<?php echo $event->getId();?>"><?php echo $event->getName();?></a></li>
+                    <li onclick="location.href = 'event_detail.php?id=<?php echo $event->getId();?>'" class="liste_prochains_events"><?php echo $event->getName();?></li>
                     <?php
                 }
                 ?>

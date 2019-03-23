@@ -7,15 +7,16 @@ include_once('classes/evenementsManager.class.php');
 $dbo=new Mypdo();
 $evenementsManager=new evenementsManager($dbo);
 ?>
-    <h1>Liste des prochains évènements</h1>
-    <main id="page_events">
+    <main>
+        <h1>Liste des prochains évènements</h1>
+        <div id="page_events">
         <div id="prochains_events">
             <ul>
                 <li id="titre_liste_prochains_events">Prochains événements</li>
                 <?php
                 $events=$evenementsManager->getFutureEvents();
                 foreach($events as $event){ ?>
-                    <li class="liste_prochains_events"><a href="event_detail.php?id=<?php echo $event->getId();?>"><?php echo $event->getName();?></a></li>
+                    <li onclick="location.href = 'event_detail.php?id=<?php echo $event->getId();?>'" class="liste_prochains_events"><?php echo $event->getName();?></li>
                     <?php
                 }
                 ?>
@@ -53,6 +54,7 @@ $evenementsManager=new evenementsManager($dbo);
 
         <div id='calendar-container'>
             <div id='calendar'></div>
+        </div>
         </div>
     </main>
 <?php

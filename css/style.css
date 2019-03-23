@@ -1,5 +1,37 @@
 html{
     cursor: url("../images/curseur/patte_chien.gif"), pointer;
+    font-family: "Goudy Bookletter 1911", sans-serif;
+}
+
+#image_header{
+    width:70%;
+    position:absolute;
+    bottom:0;
+    left:15%;
+    height:100%;
+}
+
+#image_header img{
+    object-fit: contain;
+}
+
+.image_index{
+    width:50%;
+    margin:0 auto;
+}
+
+#bloc_header{
+    position:relative;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+}
+
+footer{
+    margin-top:auto;
 }
 
 main {
@@ -318,6 +350,7 @@ h2{
     justify-content: space-between;
     margin:0;
     width:100%;
+    border-radius:15px
 }
 
 #textarea_index{
@@ -375,7 +408,15 @@ main{
 
 #form_index{
     background-color:lightcyan;
-    padding:5px;
+    padding:10px;
+}
+
+.bloc_commentaire_profil{
+    border:3px solid #028090;
+}
+
+button{
+    border:2px solid #028090;
 }
 
 /* VERSION TABLETTE */
