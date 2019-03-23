@@ -33,7 +33,14 @@ $animalphotos = $stmt -> fetchAll();
         <h1><?php echo $animal->nom;?>, animal de <?php echo $animal->first_name.' '.strtoupper($animal->last_name);?></h1>
     </div>
     <p class="description_animal"><?php echo $animal->description;?></p>
-    <button onclick="location.href='ajouter_photo_animal.php?id=<?php echo $animal->idAnimal;?>'">Ajouter des photos de <?php echo $animal->nom;?></button>
+    <?php
+    if($_SESSION['id']===$animal->id) {
+        ?>
+        <button onclick="location.href='ajouter_photo_animal.php?id=<?php echo $animal->idAnimal; ?>'">Ajouter des
+            photos de <?php echo $animal->nom; ?></button>
+        <?php
+    }
+    ?>
     <div id="images_animal_user">
 
       <?php foreach ($animalphotos as $photo){

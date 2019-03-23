@@ -24,9 +24,11 @@ $evenementsManager=new evenementsManager($dbo);
                 
                 UNION ALL
                 
-                (SELECT '','','','','','',ap.id,ap2.id as idPhoto,nom,photo,date as dateCreated FROM animal_proprietaire ap 
+                (SELECT '',idProprietaire,'',last_name,first_name,image_profil,ap.id,ap2.id as idPhoto,nom,photo,date as dateCreated FROM animal_proprietaire ap 
                 JOIN animal_photo ap2
-                ON ap.id=ap2.idAnimal)
+                ON ap.id=ap2.idAnimal
+                JOIN users u
+                ON u.id=ap.idProprietaire)
                 ORDER BY dateCreated DESC";
         $stmt = $dbo->prepare($sql);
         $stmt->execute();
@@ -60,7 +62,14 @@ $evenementsManager=new evenementsManager($dbo);
                 }
                 ?>
                 <div class="bloc_commentaire_profil photo_accueil">
-                    <div class="image_index"><img src="images/animaux/<?php echo $comment->idAnimal.'_'.$comment->photo;?>"></div>
+                    <div onclick="location.href = 'profil.php?id=<?php echo $comment->idUserAuthor; ?>'"
+                         class="cadre_photo_profil_commentaire">
+                        <?php echo '<img src="images/utilisateurs/' . $comment->image_profil . '">'; ?>
+                    </div>
+                    <div class="commentaire_date">
+                        <?php echo 'Photo posté le ' . utf8_encode(strftime('%A %d %B', strtotime($comment->dateCreated))) . ' par ' . $comment->first_name . ' ' . strtoupper($comment->last_name); ?>
+                    </div>
+                    <div onclick="location.href='post.php?id=<?php echo $comment->idAnimal;?>'" class="image_index"><img src="images/animaux/<?php echo $comment->idAnimal.'_'.$comment->photo;?>"></div>
                     <div data-id-photo="<?php echo $comment->idPhoto;?>" id="cadre_page_detail" data-total-like="<?php echo $likes->nb_likes;?>" data-like="<?php if($like===true){echo 'true';}else{echo 'false';};?>" class="cadre_like_photo_animal <?php if($like===true){echo 'cadre_liked';};?>">
                         <div id="form_detail_animal" data-id-photo="<?php echo $comment->idPhoto;?>" class="icon_like"><img src="images/like_icon.png"></div>
                         <div class="like_photo_animal">J'aime (<?php echo $likes->nb_likes;?>)</div>

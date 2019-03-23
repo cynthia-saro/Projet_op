@@ -3,7 +3,7 @@ $titre="Mentions légales";
 require_once("include/header.inc.php");
 ?>
     <main id="page_mentions_legales">
-        <h1>MENTIONS LEGALES :</h1>
+        <h1>Mentions Légales</h1>
         <div id="mentions_legales_cadre">
         <p style="text-align:justify"><strong>1. Présentation du site :<br />
             </strong><br />
