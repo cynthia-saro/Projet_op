@@ -12,7 +12,9 @@ require_once("include/header.inc.php");
             L'Équipe Mironos a pour ambition de réunir tous les propriétaires d’animaux pour qu’ils puissent s’informer, échanger et partager la  vie de leurs petits compagnons.
         </div>
         <div id="cadre_motion_design">
-
+            <video controls="controls">
+                <source src="teaser.mp4"  type="video/mp4" />
+            </video>
         </div>
     </main>
 <?php

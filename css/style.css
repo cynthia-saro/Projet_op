@@ -419,6 +419,14 @@ button{
     border:2px solid #028090;
 }
 
+#cadre_motion_design video{
+    width:100%;
+}
+
+#cadre_motion_design{
+    margin-top:50px;
+}
+
 /* VERSION TABLETTE */
 @media screen and (min-width:600px) and (max-width:1200px){
     #espace_profil{
